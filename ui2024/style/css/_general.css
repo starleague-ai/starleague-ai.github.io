@@ -4,38 +4,61 @@ body {
 
 
 
-h1, h2, h3, h4, h5, h6, p, span {
+h1, h2, h3, h4, h5, h6, p, span, a {
     text-transform: none;
-    color: #161616;
+    color: rgb(33, 33, 33);
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
+p, span {
+    text-align: justify;
+}
 
 
-.block, .block_reverse {
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    opacity: .67;
+}
+a .link_img {
+    display: none;
+    content: url(/ui2024/style/icon/link.png);
+}
+a:hover .link_img {
+    display: inherit;
+}
+
+
+
+.block, .block_left, .block_right {
     display: flex;
     flex-basis: 0;
-    padding: 1% 2%;
+    padding: 1% 3% 0% 3%;
 }
-.block {
+.block_left {
     flex-direction: row;
+    padding: 1% 3%;
 }
-.block_reverse {
+.block_right {
     flex-direction: row-reverse;
-    background-color: #f4f4f4;
+    background-color: rgb(233, 233, 233);
+    padding: 1% 3%;
 }
 /* mobile
-.block, .block_reverse {
+.block_left, .block_right {
     flex-direction: column;
 } 
-.block div, .block_reverse div {
+.block_left div, .block_right div {
     flex-grow: 1;
 } */
 
 
 
-.block div, .block_reverse div {
+.block_left div, .block_right div {
     display: flex;
     flex-basis: 0;
     flex-direction: column;
