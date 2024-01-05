@@ -36,9 +36,11 @@ a:hover .link_img {
 span a, p a{
     font-weight: normal;
     text-decoration: underline;
+    color: #00a0e8;
 }
 li a {
     font-weight: normal;
+    color: #00a0e8;
 }
 
 
