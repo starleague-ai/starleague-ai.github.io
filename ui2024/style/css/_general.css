@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6, p, span {
+    text-transform: none;
+    color: #161616;
+}
+
+body {
+    margin: 0;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+}
+.block_reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-basis: 0;
+    background-color: #f4f4f4;
+}
+.block, .block_reverse {
+    padding: 1% 2%;
+}
+.block div, .block_reverse div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    justify-content: center;
+}
+/* mobile
+.block, .block_reverse {
+    flex-direction: column;
+} 
+.block div, .block_reverse div {
+    flex-grow: 1;
+} */
