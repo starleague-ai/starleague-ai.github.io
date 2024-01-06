@@ -6,6 +6,9 @@
 
 
 .track_title {
+    margin: 0;
+}
+.track_title h1 {
     font-size: 500%;
     margin: 0;
 }
