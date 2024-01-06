@@ -33,12 +33,7 @@ a:hover .link_img {
     display: inherit;
 }
 
-span a, p a{
-    font-weight: normal;
-    text-decoration: underline;
-    color: #00a0e8;
-}
-li a {
+span a, p a, li a{
     font-weight: normal;
     color: #00a0e8;
 }
@@ -77,9 +72,39 @@ li a {
 
 
 
+.navigator {
+    justify-content: left;
+    padding-bottom: 1%;
+    border-bottom: 3px solid rgb(233, 233, 233);
+    flex-grow: 1;
+}
+.navigator a {
+    margin-right: 2%;
+}
+
+
+
 .citation {
     background-color: lightgray;
     margin: 13px 0;
     padding: 13px;
     border-radius: 7px;
+}
+
+
+
+.person_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.person_container div {
+    max-width: 200px;
+}
+.person_container div img {
+    width: 200px;
+    height: 200px;
+}
+.person_container div h4 {
+    margin-bottom: 7px;
 }

@@ -5,18 +5,6 @@
 }
 
 
-
-.navigator {
-    justify-content: left;
-    padding-bottom: 1%;
-    border-bottom: 3px solid rgb(233, 233, 233);
-    flex-grow: 1;
-}
-.navigator a {
-    margin-right: 2%;
-}
-
-
 .track_title {
     font-size: 500%;
     margin: 0;
