@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5, h6 {
 p, span, li {
     text-align: justify;
 }
+br {
+    user-select: none;
+}
 
 
 
@@ -74,7 +77,6 @@ span a, p a, li a{
 
 
 .navigator {
-    padding-bottom: 1%;
     border-bottom: 3px solid rgb(233, 233, 233);
     flex-grow: 1;
 }
@@ -90,6 +92,9 @@ span a, p a, li a{
     padding: 17px;
     border-radius: 7px;
 }
+.citation br {
+    user-select: text;
+}
 
 
 
@@ -104,6 +109,7 @@ span a, p a, li a{
 }
 .block_left div .person_container div h4, .person_container div span {
     margin-bottom: 7px;
+    text-align: left;
 }
 .block_left div .person_container div div {
     border-bottom: 3px solid rgb(233, 233, 233);
