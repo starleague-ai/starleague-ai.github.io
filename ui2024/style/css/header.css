@@ -2,8 +2,8 @@
     user-select: none;
 }
 .block_header {
-    padding-top: .5%;
-    padding-bottom: .5%;
+    padding-top: max(11px, .5%);
+    padding-bottom: max(11px, .5%);
     justify-content: space-between;
 }
 
@@ -25,6 +25,7 @@
 .header_right {
     display: flex;
     justify-content: right;
+    text-wrap: nowrap;
 }
 .header_right div {
     margin-left: 33px;

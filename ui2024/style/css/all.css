@@ -26,6 +26,10 @@ code {
     padding: 2px 3px;
     user-select: all;
 }
+img {
+    user-select: none;
+}
+
 
 
 a {
@@ -54,16 +58,16 @@ span a, p a, li a{
 .block, .block_left, .block_right, .block_footer, .block_header {
     display: flex;
     flex-basis: 0;
-    padding: 1% 3% 0% 3%;
+    padding: max(11px, 1%) max(33px, 3%) 0 max(33px, 3%);
 }
 .block_left {
     flex-direction: row;
-    padding: 3% 3%;
+    padding: max(33px, 3%);
 }
 .block_right {
     flex-direction: row-reverse;
     background-color: rgb(233, 233, 233);
-    padding: 3% 3%;
+    padding: max(33px, 3%);
 }
 /* mobile
 .block_left, .block_right {
@@ -88,7 +92,7 @@ span a, p a, li a{
     flex-grow: 1;
 }
 .navigator a {
-    margin-right: 2%;
+    margin-right: max(22px, 2%);
 }
 
 
@@ -109,7 +113,7 @@ span a, p a, li a{
     display: grid;
     grid-template-columns: repeat(auto-fill, 45%);
     justify-content: space-between;
-    column-gap: 5%;
+    column-gap: max(55px, 5%);
 }
 
 .block_left div .person_container, .block_left div .person_two_column div .person_container {
@@ -117,7 +121,7 @@ span a, p a, li a{
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: space-between;
     gap: 33px;
-    margin-bottom: 3%;
+    margin-bottom: max(33px, 3%);
 }
 .block_left div .person_container div img, .block_left div .person_two_column div .person_container div img {
     width: 100%;
@@ -128,4 +132,18 @@ span a, p a, li a{
 }
 .block_left div .person_container div div, .block_left div .person_two_column div .person_container div div {
     border-bottom: 3px solid rgb(233, 233, 233);
+}
+
+
+
+.block_left div .brand_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.block_left div .brand_container img {
+    height: 66px;
+    margin: max(11px, 1%) 0;
 }
