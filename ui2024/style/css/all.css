@@ -25,6 +25,7 @@ code {
     background-color: rgba(0, 160, 232, .23);
     padding: 2px 3px;
     user-select: all;
+    margin: 0 5px;
 }
 img {
     user-select: none;
