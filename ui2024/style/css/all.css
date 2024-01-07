@@ -18,7 +18,14 @@ p, span, li {
 br {
     user-select: none;
 }
-
+code {
+    color: #00a0e8;
+    font-weight: bold;
+    font-size: larger;
+    background-color: rgba(0, 160, 232, .23);
+    padding: 2px 3px;
+    user-select: all;
+}
 
 
 a {
@@ -47,16 +54,16 @@ span a, p a, li a{
 .block, .block_left, .block_right, .block_footer, .block_header {
     display: flex;
     flex-basis: 0;
-    padding: 2% 3% 0% 3%;
+    padding: 1% 3% 0% 3%;
 }
 .block_left {
     flex-direction: row;
-    padding: 2% 3%;
+    padding: 3% 3%;
 }
 .block_right {
     flex-direction: row-reverse;
     background-color: rgb(233, 233, 233);
-    padding: 2% 3%;
+    padding: 3% 3%;
 }
 /* mobile
 .block_left, .block_right {
