@@ -5,6 +5,10 @@
 .block_footer {
     flex-direction: column;
 }
+.footer_align_right {
+    display: flex;
+    justify-content: right;
+}
 
 
 

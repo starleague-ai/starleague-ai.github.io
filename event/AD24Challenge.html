@@ -8,6 +8,9 @@
 
 
 <script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
     $.get("/ui2024/components/footer.html",function(result){
         $("body").append(result)
     })
@@ -20,7 +23,33 @@
 
 
     <div class="banner">
+        <div class="banner_container">
 
+            <div class="banner_logo">
+                <img src="/ui2024/style/icon/cvpr/cvpr2024_white.svg"/>
+                <img src="/ui2024/style/icon/cvpr/ieee_cs_white.png"/>
+            </div>
+            
+            <div class="banner_title_cn">
+                <img src="/ui2024/style/icon/pujia_white.png"/>
+                <span>自动驾驶<br>挑战赛</span>
+            </div>
+
+            <div class="banner_title_en">
+                <span>Autonomous Driving Challenge</span>
+            </div>
+
+            <div class="banner_content">
+                <span>
+                    @ CVPR Workshop
+                    <br>
+                    <a>Foundation Models for Autonomous Systems</a>
+                    <br>
+                    June, Seattle, USA 
+                </span>
+            </div>
+
+        </div>
     </div>
 
 

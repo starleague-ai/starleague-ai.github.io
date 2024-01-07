@@ -1,0 +1,31 @@
+.header {
+    user-select: none;
+}
+.block_header {
+    padding-top: .5%;
+    padding-bottom: .5%;
+    justify-content: space-between;
+}
+
+
+
+.header a img {
+    height: 23px;
+}
+
+
+
+.header_left a {
+    opacity: 1;
+}
+
+
+
+
+.header_right {
+    display: flex;
+    justify-content: right;
+}
+.header_right div {
+    margin-left: 33px;
+}
