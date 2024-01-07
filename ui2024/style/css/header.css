@@ -15,7 +15,7 @@
 
 
 
-.header_left a {
+.header_left a:any-link, .header_left a:-webkit-any-link {
     opacity: 1;
 }
 
