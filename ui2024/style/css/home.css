@@ -6,15 +6,10 @@
     background-position: center;
 }
 .banner_container {
-    height: 80%;
+    height: 88%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-@media (max-width: 1024px) {
-    .banner_container {
-        height: 90%;
-    }
 }
 .banner_container div {
     display: flex;
@@ -39,9 +34,15 @@
 
 
 .banner_title_en span, .banner_title_en span a {
+    width: 77%;
     font-size: 33px;
     font-weight: bold;
     color: rgb(233, 233, 233);
+}
+@media (max-width: 1024px) {
+    .banner_title_en span, .banner_title_en span a {
+        width: 100%;
+    }
 }
 
 
