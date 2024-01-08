@@ -10,7 +10,7 @@
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .banner_container div {
     display: flex;
@@ -19,22 +19,11 @@
 
 
 
-.banner_logo {
-    flex-direction: row;
-}
-.banner_logo img {
-    height: 66px;
-    margin-right: 33px;
-}
-
-
-
 .banner_title_cn {
     flex-direction: row;
 }
 .banner_title_cn img {
-    height: 128px;
-    margin-right: 33px;
+    width: 512px;
 }
 .banner_title_cn span {
     align-items: center;
@@ -45,7 +34,7 @@
 
 
 
-.banner_title_en span {
+.banner_title_en span, .banner_title_en span a {
     font-size: 30px;
     font-weight: bold;
     color: rgb(233, 233, 233);
