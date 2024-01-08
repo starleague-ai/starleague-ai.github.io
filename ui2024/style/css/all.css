@@ -95,13 +95,6 @@ span a, p a, li a{
     flex-direction: row-reverse;
     background-color: rgb(233, 233, 233);
 }
-/* mobile
-.block_left, .block_right {
-    flex-direction: column;
-} 
-.block_left div, .block_right div {
-    flex-grow: 1;
-} */
 
 
 
@@ -116,7 +109,6 @@ span a, p a, li a{
 .navigator {
     border-bottom: 3px solid rgb(233, 233, 233);
     flex-grow: 1;
-    margin-top: min(-1100px, -1%);
 }
 .navigator a {
     margin-right: max(22px, 2%);
