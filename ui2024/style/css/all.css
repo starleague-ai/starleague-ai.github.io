@@ -86,18 +86,14 @@ span a, p a, li a{
 .banner_container, .block, .block_left, .block_right, .block_footer, .block_header {
     display: flex;
     flex-basis: 0;
-    padding: max(11px, 1%) max(55px, 5%) 0 max(55px, 5%);
+    padding: 0 max(55px, 5%);
 }
 .block_left {
     flex-direction: row;
-    padding: 55px;
-    padding-bottom: max(33px, 3%);
 }
 .block_right {
     flex-direction: row-reverse;
     background-color: rgb(233, 233, 233);
-    padding: 55px;
-    padding-bottom: max(33px, 3%);
 }
 /* mobile
 .block_left, .block_right {
@@ -120,6 +116,7 @@ span a, p a, li a{
 .navigator {
     border-bottom: 3px solid rgb(233, 233, 233);
     flex-grow: 1;
+    margin-top: min(-1100px, -1%);
 }
 .navigator a {
     margin-right: max(22px, 2%);
