@@ -1,3 +1,27 @@
+/* 
+moblie
+@media (max-width: 768px) {
+
+}
+  
+tablet  
+@media (min-width: 768px) {
+
+}
+  
+notebook
+@media (min-width: 992px) {
+
+}
+  
+desktop
+@media (min-width: 1200px) {
+
+} 
+*/
+
+
+
 body {
     margin: 0;
     font-family: San Francisco, system-ui;
