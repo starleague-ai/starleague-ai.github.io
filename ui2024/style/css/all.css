@@ -23,12 +23,15 @@ code {
     font-weight: bold;
     font-size: larger;
     background-color: rgba(0, 160, 232, .23);
-    padding: 2px 3px;
+    padding: 0 3px;
     user-select: all;
-    margin: 0 5px;
+    margin: 0 3px;
 }
 img {
     user-select: none;
+}
+li {
+    list-style-type: circle;
 }
 
 
@@ -143,8 +146,11 @@ span a, p a, li a{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin: 0 min(-33px, -3%);
 }
-.block_left div .brand_container img {
+.block_left div .brand_container div {
+    margin: max(22px, 2%) max(33px, 3%);
+}
+.block_left div .brand_container div img {
     height: 66px;
-    margin: max(11px, 1%) 0;
 }
