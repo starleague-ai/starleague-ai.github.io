@@ -91,11 +91,13 @@ span a, p a, li a{
 .block_left {
     flex-direction: row;
     padding: max(33px, 3%);
+    padding-bottom: max(11px, 1%);
 }
 .block_right {
     flex-direction: row-reverse;
     background-color: rgb(233, 233, 233);
     padding: max(33px, 3%);
+    padding-bottom: max(11px, 1%);
 }
 /* mobile
 .block_left, .block_right {
