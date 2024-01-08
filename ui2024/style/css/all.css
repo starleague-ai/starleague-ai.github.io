@@ -83,21 +83,21 @@ span a, p a, li a{
 
 
 
-.block, .block_left, .block_right, .block_footer, .block_header {
+.banner_container, .block, .block_left, .block_right, .block_footer, .block_header {
     display: flex;
     flex-basis: 0;
-    padding: max(11px, 1%) max(33px, 3%) 0 max(33px, 3%);
+    padding: max(11px, 1%) max(55px, 5%) 0 max(55px, 5%);
 }
 .block_left {
     flex-direction: row;
-    padding: max(33px, 3%);
-    padding-bottom: max(11px, 1%);
+    padding: 55px;
+    padding-bottom: max(33px, 3%);
 }
 .block_right {
     flex-direction: row-reverse;
     background-color: rgb(233, 233, 233);
-    padding: max(33px, 3%);
-    padding-bottom: max(11px, 1%);
+    padding: 55px;
+    padding-bottom: max(33px, 3%);
 }
 /* mobile
 .block_left, .block_right {

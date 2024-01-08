@@ -6,11 +6,15 @@
     background-position: center;
 }
 .banner_container {
-    padding: max(33px, 3%);
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+@media (max-width: 1024px) {
+    .banner_container {
+        height: 90%;
+    }
 }
 .banner_container div {
     display: flex;
@@ -35,7 +39,7 @@
 
 
 .banner_title_en span, .banner_title_en span a {
-    font-size: 30px;
+    font-size: 33px;
     font-weight: bold;
     color: rgb(233, 233, 233);
 }
@@ -71,13 +75,14 @@
     margin: max(22px, 2%) max(33px, 3%);
     border: 7px solid rgb(33, 33, 33);
     height: 100px;
-    width: 400px;
+    width: 330px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 7px;
 }
 .block_left div .vision_container a span {
-    font-size: 200%;
+    font-size: 33px;
     font-weight: bold;
     text-align: center;
 }
