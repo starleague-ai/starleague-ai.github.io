@@ -95,6 +95,10 @@ span a, p a, li a{
     flex-direction: row-reverse;
     background-color: rgb(233, 233, 233);
 }
+.left_right {
+    padding-top: max(33px, 3%);
+    padding-bottom: max(33px, 3%);
+}
 
 
 
