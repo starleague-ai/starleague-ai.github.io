@@ -19,6 +19,18 @@
     $.get("/ui2024/components/footer.html",function(result){
         $("body").append(result)
     })
+
+    $(function() {
+        var boxes = $(".brand_logos");
+
+        for (var i = boxes.length; i > 0; i--) {
+            var randomIndex = Math.floor(Math.random() * i);
+            var randomBox = boxes[randomIndex];
+            var currentBox = boxes[i - 1];
+
+            $(currentBox).before($(randomBox));
+        }
+    });
 </script>
 
 
@@ -105,17 +117,20 @@
     <div class="block_left" style="margin-top: 0; padding-top: 0">
         <div style="flex-grow: 1;">
             <div class="brand_container">
-                <div><a href="https://www.shlab.org.cn/" target="_blank"><img src="/ui2024/style/brand/shanghai_ai_lab_.png"/></a></div>
-                <div><a href="https://www.sjtu.edu.cn/" target="_blank"><img src="/ui2024/style/brand/SJTU.png"/></a></div>
-                <div><a href="https://www.fudan.edu.cn/" target="_blank"><img src="/ui2024/style/brand/fudan.png"/></a></div>
-                <div><a href="https://www.tongji.edu.cn/" target="_blank"><img src="/ui2024/style/brand/tongji.png"/></a></div>
-                <div><a href="https://www.changan.com.cn/" target="_blank"><img src="/ui2024/style/brand/changan_auto.png"/></a></div>
-                <div><a href="https://home.baidu.com/" target="_blank"><img src="/ui2024/style/brand/baidu.png"/></a></div>
-                <div><a href="https://www.huawei.com/" target="_blank"><img src="/ui2024/style/brand/huawei.png"/></a></div>
-                <div><a href="https://www.megvii.com/" target="_blank"><img src="/ui2024/style/brand/megvii.png"/></a></div>
-                <div><a href="https://www.bydglobal.com/" target="_blank"><img src="/ui2024/style/brand/BYD.png"/></a></div>
-                <div><a href="https://www.meituan.com/" target="_blank"><img src="/ui2024/style/brand/meituan.png"/></a></div>
-                <div><a href="https://www.agibot.com/" target="_blank"><img src="/ui2024/style/brand/agibot.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.shlab.org.cn/" target="_blank"><img src="/ui2024/style/brand/shanghai_ai_lab_.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.sjtu.edu.cn/" target="_blank"><img src="/ui2024/style/brand/SJTU.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.fudan.edu.cn/" target="_blank"><img src="/ui2024/style/brand/fudan.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.tongji.edu.cn/" target="_blank"><img src="/ui2024/style/brand/tongji.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.changan.com.cn/" target="_blank"><img src="/ui2024/style/brand/changan_auto.png"/></a></div>
+                <div class="brand_logos"><a href="https://home.baidu.com/" target="_blank"><img src="/ui2024/style/brand/baidu.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.huawei.com/" target="_blank"><img src="/ui2024/style/brand/huawei.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.megvii.com/" target="_blank"><img src="/ui2024/style/brand/megvii.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.bydglobal.com/" target="_blank"><img src="/ui2024/style/brand/BYD.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.meituan.com/" target="_blank"><img src="/ui2024/style/brand/meituan.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.agibot.com/" target="_blank"><img src="/ui2024/style/brand/agibot.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.tsinghua.edu.cn/" target="_blank"><img src="/ui2024/style/brand/tsinghua.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.pku.edu.cn/" target="_blank"><img src="/ui2024/style/brand/peking.png"/></a></div>
+                <div class="brand_logos"><a href="https://buaa.edu.cn/" target="_blank"><img src="/ui2024/style/brand/buaa.png"/></a></div>
                 <div></div>
             </div>
         </div> 
