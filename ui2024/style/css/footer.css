@@ -12,9 +12,6 @@
 
 
 
-.footer a img {
-    height: 66px;
-}
 .footer a .footer_logo_color {
     display: none;
 }
@@ -26,14 +23,18 @@
 }
 
 
-
+.footer_first_row a img {
+    height: 66px;
+}
 .footer_first_row {
     display: grid;
     grid-template-columns: 20% 80%;
 }
 
 
-
+.footer_second_row a img {
+    height: 33px;
+}
 .footer_second_row {
     display: grid;
     grid-template-columns: 80% 20%;
