@@ -186,8 +186,9 @@ span a, p a, li a{
     color: white;
     font-weight: bold;
     padding: 5px;
-    border-radius: 30px;
+    border-radius: 33px;
     font-size: xx-small;
+    user-select: none;
 }
 
 
