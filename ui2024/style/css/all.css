@@ -173,6 +173,14 @@ span a, p a, li a{
 .block_left div .brand_container div img {
     height: 66px;
 }
+@media (max-width: 1024px) {
+    .block_left div .brand_container div img {
+        height: 55px;
+    }
+    .block_left div .brand_container div div div {
+        font-size: normal;
+    }
+}
 .block_left div .brand_container div {
     display: flex;
     flex-direction: row;
