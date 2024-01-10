@@ -173,6 +173,23 @@ span a, p a, li a{
 .block_left div .brand_container div img {
     height: 66px;
 }
+.block_left div .brand_container div {
+    display: flex;
+    flex-direction: row;
+}
+.block_left div .brand_container div div {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 0 0 7px ;
+}
+.block_left div .brand_container div div div {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 30px;
+    font-size: xx-small;
+}
+
 
 
 .block_left div .brand_container_title {
