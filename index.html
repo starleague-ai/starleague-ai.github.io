@@ -20,14 +20,27 @@
         $("body").append(result)
     })
 
+    function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+        // While there remain elements to shuffle.
+        while (currentIndex > 0) {
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
+
     $(function() {
         var boxes = $(".brand_logos");
-
+        var indices = shuffle(Array.from({length: boxes.length}, (x, i) => i));
         for (var i = boxes.length; i > 0; i--) {
-            var randomIndex = Math.floor(Math.random() * i);
+            var randomIndex = indices[i-1];
             var randomBox = boxes[randomIndex];
             var currentBox = boxes[i - 1];
-
             $(currentBox).before($(randomBox));
         }
     });
@@ -125,7 +138,7 @@
                 <div class="brand_logos"><a href="https://buaa.edu.cn/" target="_blank"><img src="/ui2024/style/brand/buaa.png"/></a></div>
                 <div class="brand_logos"><a href="https://www.hp.com/" target="_blank"><img src="/ui2024/style/brand/hp.svg"/></a></div>
                 <div class="brand_logos"><a href="https://www.jiqizhixin.com/" target="_blank"><img src="/ui2024/style/brand/jiqizhixin.png"/></a></div>
-                <div class="brand_logos"></div>
+                <div></div>
             </div>
         </div> 
     </div>
