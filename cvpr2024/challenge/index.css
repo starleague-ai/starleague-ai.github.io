@@ -60,6 +60,16 @@
 
 
 
+.glance {
+    display: flex;
+    justify-content: center;
+}
+.glance img {
+    width: 512;
+}
+
+
+
 .track_title {
     margin: 0;
 }
