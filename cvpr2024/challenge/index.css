@@ -78,6 +78,9 @@
     flex-direction: column;
     justify-content: center;
 }
+.glance .glance_left p {
+    text-align: right;
+}
 .glance .glance_right {
     display: flex;
     flex-direction: column;
@@ -98,7 +101,7 @@
     margin: 0;
 }
 .glance div p a {
-    color: black;
+    color: rgb(33, 33, 33);
     font-weight: bold;
     font-size: x-large;
 }

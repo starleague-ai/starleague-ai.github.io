@@ -30,7 +30,7 @@
     .content {
         text-align: right;
     }
-    &:nth-child(2n) {
+    &:nth-child(1),&:nth-child(2) {
         margin-left: 55%;
         text-align: left;
         float: right;
