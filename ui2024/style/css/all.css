@@ -99,7 +99,11 @@ span a, p a, li a{
     padding-top: max(33px, 3%);
     padding-bottom: max(33px, 3%);
 }
-
+@media (max-width: 1024px) {
+    .block_left, .block_right {
+        flex-direction: column;
+    }
+}
 
 
 .block_left div, .block_right div {
@@ -114,9 +118,12 @@ span a, p a, li a{
     border-bottom: 3px solid rgb(233, 233, 233);
     flex-grow: 1;
 }
-.navigator a {
+.navigator a, .navigator br {
     margin-right: max(22px, 2%);
     font-size: small;
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 

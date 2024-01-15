@@ -28,7 +28,7 @@
         }
     } */
     h2 {
-        margin: 3px;
+        margin: 3px 0;
         font-size: larger;
     }
     span {
@@ -53,5 +53,25 @@
         .content {
             text-align: left;
         }
+    }
+}
+@media (max-width: 1024px) {
+    .timeline > :before {
+        display: none;
+    }
+    .timeline > .entries > .entry {
+        text-align: left;
+        margin-right: 0;
+    }
+    .timeline .entries .entry h2 {
+        margin: 3px 0;
+    }
+    .timeline .entries .entry span {
+        margin-bottom: 7px;
+    }
+    .timeline .entries .entry code {
+        font-weight: normal;
+        font-size: small;
+        background-color: white;
     }
 }
