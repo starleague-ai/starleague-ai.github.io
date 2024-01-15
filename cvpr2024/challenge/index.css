@@ -99,11 +99,13 @@
 .glance div p {
     padding: 7px 17px;
     margin: 0;
+    min-width: 1000px;
 }
 .glance div p a {
     color: rgb(33, 33, 33);
     font-weight: bold;
     font-size: x-large;
+    user-select: none;
 }
 
 
@@ -114,4 +116,7 @@
 .track_title h1 {
     font-size: 500%;
     margin: 0;
+}
+.track_title h2 {
+    font-size: 200%;
 }

@@ -3,7 +3,7 @@
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left: 30%;
+    left: 35%;
     width: 3px;
     border-radius: 3px;
     background-color: rgb(33, 33, 33);
@@ -13,7 +13,7 @@
 }
 
 .timeline > .entries > .entry {
-    width: calc(30% - 80px);
+    margin-right: 71.5%;
     text-align: right;
     .title {
         position: relative;
@@ -24,19 +24,30 @@
             height: 13px;
             background-color: rgb(33, 33, 33);
             border-radius: 100%;
-            right: -90px;
+            right: -73.5px;
         }
     }
-    .content {
-        text-align: right;
+    h2 {
+        margin: 3px;
+        font-size: larger;
     }
-    &:nth-child(1),&:nth-child(2) {
-        margin-left: 55%;
+    span {
+        text-align: right;
+        margin-bottom: 7px;
+        code {
+            font-weight: normal;
+            font-size: small;
+            background-color: white;
+        }
+    }
+    &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(7) {
+        margin-right: 0%;
+        margin-left: 42%;
         text-align: left;
         float: right;
         .title {
             &:before {
-                left: -203px;
+                left: -75px;
             }
         }
         .content {
