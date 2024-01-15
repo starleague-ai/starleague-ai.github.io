@@ -65,6 +65,9 @@
     display: flex;
     justify-content: center;
 }
+.glance div {
+    width: 100%;
+}
 .glance img {
     width: 512;
 }
@@ -99,7 +102,6 @@
 .glance div p {
     padding: 7px 17px;
     margin: 0;
-    min-width: 1000px;
 }
 .glance div p a {
     color: rgb(33, 33, 33);
