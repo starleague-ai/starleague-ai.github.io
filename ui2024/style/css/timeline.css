@@ -24,7 +24,7 @@
             height: 13px;
             background-color: rgb(33, 33, 33);
             border-radius: 100%;
-            right: -73.5px;
+            right: -27.4%;
         }
     }
     h2 {
@@ -47,7 +47,7 @@
         float: right;
         .title {
             &:before {
-                left: -75px;
+                left: -13.6%;
             }
         }
         .content {
