@@ -116,6 +116,7 @@ span a, p a, li a{
 }
 .navigator a {
     margin-right: max(22px, 2%);
+    font-size: small;
 }
 
 
