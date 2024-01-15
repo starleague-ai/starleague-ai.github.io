@@ -15,7 +15,7 @@
 .timeline > .entries > .entry {
     margin-right: 71.5%;
     text-align: right;
-    .title {
+    /* .title {
         position: relative;
         &:before {
             content: "";
@@ -26,7 +26,7 @@
             border-radius: 100%;
             right: -27.4%;
         }
-    }
+    } */
     h2 {
         margin: 3px;
         font-size: larger;
@@ -45,11 +45,11 @@
         margin-left: 42%;
         text-align: left;
         float: right;
-        .title {
+        /* .title {
             &:before {
                 left: -13.6%;
             }
-        }
+        } */
         .content {
             text-align: left;
         }
