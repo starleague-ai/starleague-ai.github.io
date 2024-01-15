@@ -121,6 +121,7 @@ span a, p a, li a{
 .navigator a, .navigator br {
     margin-right: max(22px, 2%);
     font-size: small;
+    font-weight: bold;
     @media (max-width: 1024px) {
         display: none;
     }
