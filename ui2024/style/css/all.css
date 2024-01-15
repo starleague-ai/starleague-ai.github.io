@@ -61,7 +61,7 @@ li {
 
 
 a {
-    font-weight: bold;
+    /* font-weight: bold; */
     text-decoration: none;
 }
 a:any-link:hover, a:-webkit-any-link:hover {
