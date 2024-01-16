@@ -140,3 +140,23 @@
 .widget_container a img {
     height: 100%;
 }
+
+
+
+@media (max-width: 1024px) {
+    .rules li {
+        font-size: larger;
+    }
+    .ul_li {
+        font-size: xx-small;
+    }
+}
+
+
+
+.date_award {
+    width: 60%;
+}
+.date_award tbody tr td{
+    width: 70%;
+}

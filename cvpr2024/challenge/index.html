@@ -280,7 +280,7 @@
             
             <br>
             <h2>Date</h2>
-            <table style="width: 50%;">
+            <table class="date_award">
                 <tbody>
                     <tr>
                         <td>Challenge Period Open</td><td>March 15, 2023</td>
@@ -299,7 +299,7 @@
 
             <br>
             <h2>Award</h2>
-            <table style="width: 50%;">
+            <table class="date_award">
                 <tbody>
                     <tr>
                         <td><img src='/ui2024/style/icon/bulb.png' style="width: 20px; user-select: none; margin-right: 7px;"/>Innovation Award</td><td>USD $5,000</td>
@@ -400,97 +400,105 @@
         <div style="flex-grow: 6;">
 
             <h2>Eligibility</h2>
-            <li>
-                A participant must be a member of a team and cannot be a member of multiple teams. 
-            </li>
-            <li>
-                Participants can form teams of up to <b>10</b> persons.
-            </li>
-            <li>
-                A participant cannot be involved in the execution or administration of the track.
-            </li>
-            <li>
-                A team can participate in multiple tracks but is limited to one submission account.
-            </li>
-            <li>
-                An entity can have multiple teams.
-            </li>
-            <li>
-                Participants will receive certificates. Winners will be invited to present during the CVPR workshop and may be invited to a tentative report for documenting the challenge.
-            </li>
-            <li>
-                Attempting to hack the test set or engaging in similar behaviors will result in disqualification.
-            </li>
+            <div class="rules">
+                <li>
+                    A participant must be a member of a team and cannot be a member of multiple teams. 
+                </li>
+                <li>
+                    Participants can form teams of up to <b>10</b> persons.
+                </li>
+                <li>
+                    A participant cannot be involved in the execution or administration of the track.
+                </li>
+                <li>
+                    A team can participate in multiple tracks but is limited to one submission account.
+                </li>
+                <li>
+                    An entity can have multiple teams.
+                </li>
+                <li>
+                    Participants will receive certificates. Winners will be invited to present during the CVPR workshop and may be invited to a tentative report for documenting the challenge.
+                </li>
+                <li>
+                    Attempting to hack the test set or engaging in similar behaviors will result in disqualification.
+                </li>
+            </div>
 
             <br>
             <h2>Technical</h2>
-            <li>
-                <b>The use of all publicly available datasets and pretrained weights is allowed.</b> The use of private datasets or pretrained weights is prohibited.
-            </li>
-            <li>
-                The use of future frames is prohibited except where explicitly stated. 
-            </li>
-            <li>
-                The use of data must be described explicitly in the technical report.
-            </li>
-            <li>
-                All technical reports will be made public after the conclusion of the challenge.
-            </li>
+            <div class="rules">
+                <li>
+                    <b>The use of all publicly available datasets and pretrained weights is allowed.</b> The use of private datasets or pretrained weights is prohibited.
+                </li>
+                <li>
+                    The use of future frames is prohibited except where explicitly stated. 
+                </li>
+                <li>
+                    The use of data must be described explicitly in the technical report.
+                </li>
+                <li>
+                    All technical reports will be made public after the conclusion of the challenge.
+                </li>
+            </div>
 
             <br>
             <h2>Awards</h2>
-            <li>
-                To be eligible for awards: 
-            </li>
-            <ul style="margin-top: 0; margin-bottom: 0;">
+            <div class="rules">
                 <li>
-                    Teams must make their results public on the leaderboard before the submission deadline and continue to keep them public thereafter;
+                    To be eligible for awards: 
+                </li>
+                <ul class="ul_li" style="margin-top: 0; margin-bottom: 0;">
+                    <li>
+                        Teams must make their results public on the leaderboard before the submission deadline and continue to keep them public thereafter;
+                    </li>
+                    <li>
+                        Teams must submit a <b>technical report</b> for each track in PDF format of at most 4 pages (excluding references);
+                    </li>
+                    <li>
+                        If requested, teams must provide their code, docker image, or necessary materials to the award committee for verification. 
+                    </li>
+                </ul>
+                <li>
+                    Innovation awards will be decided through a double-blind reviewing process on the technical reports by the award committee. Winners of Innovation awards can overlap with Outstanding Champion and Honorable Runner-up.
                 </li>
                 <li>
-                    Teams must submit a <b>technical report</b> for each track in PDF format of at most 4 pages (excluding references);
+                    The organizers reserve the right to update the rules in response to unforeseen circumstances in order to better serve the mission of the challenge. The organizers reserve the right to disqualify teams that have violated the rules. Organizers reserve all rights for the final explanation.
                 </li>
-                <li>
-                    If requested, teams must provide their code, docker image, or necessary materials to the award committee for verification. 
-                </li>
-            </ul>
-            <li>
-                Innovation awards will be decided through a double-blind reviewing process on the technical reports by the award committee. Winners of Innovation awards can overlap with Outstanding Champion and Honorable Runner-up.
-            </li>
-            <li>
-                The organizers reserve the right to update the rules in response to unforeseen circumstances in order to better serve the mission of the challenge. The organizers reserve the right to disqualify teams that have violated the rules. Organizers reserve all rights for the final explanation.
-            </li>
+            </div>
             
         </div>
-        <div style="flex-grow: 1;"></div>
+        <div style="flex-grow: 1;"><br><br></div>
         <div style="flex-grow: 6;">
+
             <h2>FAQ</h2>
-
-            <li>
-                How do we/I download the data?
-            </li>
-            <ul>
+            <div class="rules">
                 <li>
-                    For each track, we provide links for downloading data in the GitHub repository. The repository, which might also contain dataset API, baseline model, and other helpful information, is a good start to begin your participation.
+                    How do we/I download the data?
                 </li>
-            </ul>
+                <ul class="ul_li">
+                    <li>
+                        For each track, we provide links for downloading data in the GitHub repository. The repository, which might also contain dataset API, baseline model, and other helpful information, is a good start to begin your participation.
+                    </li>
+                </ul>
 
-            <li>
-                How many times can we/I make a submission?
-            </li>
-            <ul>
                 <li>
-                    Each track has its submission limit. Please refer to the EvalAI for each track. Submissions that error out do not count against this limit.
+                    How many times can we/I make a submission?
                 </li>
-            </ul>
+                <ul class="ul_li">
+                    <li>
+                        Each track has its submission limit. Please refer to the EvalAI for each track. Submissions that error out do not count against this limit.
+                    </li>
+                </ul>
 
-            <li>
-                Should we/I use future frames during inference?
-            </li>
-            <ul>
                 <li>
-                    No future frame is allowed except that it is noted explicitly.
+                    Should we/I use future frames during inference?
                 </li>
-            </ul>
+                <ul class="ul_li">
+                    <li>
+                        No future frame is allowed except that it is noted explicitly.
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </div>
