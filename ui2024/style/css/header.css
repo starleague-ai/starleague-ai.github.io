@@ -184,3 +184,27 @@ header.white {
     } /* 鼠标悬浮在元素上时,变为块级标签 */
   }
 }
+
+
+.header-shadow {
+  background-color: rgb(255, 255, 255) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  & li {
+    & a {
+      color: rgb(0, 0, 0, 0.8);
+      padding: 20px;
+      margin: 0px;
+      text-decoration: none;
+    }
+  }
+}
+.nav-scoll {
+  background-color: rgb(0, 0, 0, 0.8);
+  & .nav1 {
+    & a {
+      padding: 0 15px;
+      display: block;
+    }
+  }
+}
