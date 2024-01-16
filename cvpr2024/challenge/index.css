@@ -142,11 +142,14 @@
 .date_award {
     width: 67%;
 }
+.date_award tbody tr td {
+    width: 60%;
+}
 @media (max-width: 1024px) {
+    .date_award {
+        width: 80%;
+    }
     .date_award tbody tr td  {
         font-size: x-large;
     }
-}
-.date_award tbody tr td {
-    width: 60%;
 }
