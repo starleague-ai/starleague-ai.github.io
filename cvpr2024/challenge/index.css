@@ -150,6 +150,7 @@
         width: 80%;
     }
     .date_award tbody tr td  {
+        width: 70%;
         font-size: x-large;
     }
 }
