@@ -144,7 +144,7 @@
 }
 @media (max-width: 1024px) {
     .date_award tbody tr td  {
-        font-size: xx-large;
+        font-size: 30px;
     }
 }
 .date_award tbody tr td {
