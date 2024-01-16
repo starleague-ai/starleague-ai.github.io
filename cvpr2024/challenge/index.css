@@ -69,10 +69,11 @@
     width: 100%;
 }
 .glance img {
-    width: 512;
+    height: 256px;
 }
 .glance div div .glance_divider {
-    width: 7px;
+    min-width: 7px;
+    max-width: 7px;
     height: 100%;
     border-radius: 3px;
 }
@@ -106,7 +107,6 @@
 .glance div p a {
     color: rgb(33, 33, 33);
     font-weight: bold;
-    font-size: x-large;
     user-select: none;
 }
 
@@ -119,6 +119,34 @@
     font-size: 500%;
     margin: 0;
 }
-.track_title h2 {
-    font-size: 200%;
+
+
+
+.rules {
+    margin: 0;
+    padding-inline-start: 17px;
+}
+@media (max-width: 1024px) {
+    .rules {
+        padding-inline-start: 27px;
+        font-size: smaller;
+    }
+}
+.faq ul {
+    margin-top: 3;
+    margin-bottom: 11px;
+}
+
+
+
+.date_award {
+    width: 67%;
+}
+@media (max-width: 1024px) {
+    .date_award tbody tr td  {
+        font-size: larger;
+    }
+}
+.date_award tbody tr td {
+    width: 60%;
 }
