@@ -73,7 +73,7 @@ span a, p a, li a{
 }
 .left_right {
     padding-top: max(33px, 3%);
-    padding-bottom: max(33px, 3%);
+    padding-bottom: max(55px, 5%);
 }
 .block_left div, .block_right div {
     display: flex;
@@ -218,11 +218,11 @@ span a, p a, li a{
     flex-direction: row;
     justify-content: space-between;
 }
-.widget_container br {
+/* .widget_container br {
     @media (max-width: 1024px) {
         display: none;
     }
-}
+} */
 .widget_container span {
     height: 33px;
 }
