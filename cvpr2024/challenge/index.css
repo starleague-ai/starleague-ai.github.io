@@ -124,7 +124,12 @@
 
 .rules {
     margin: 0;
-    padding-inline-start: 20px;
+    padding-inline-start: 17px;
+}
+@media (max-width: 1024px) {
+    .rules {
+        padding-inline-start: 27px;
+    }
 }
 .faq ul {
     margin-top: 3;
@@ -136,6 +141,11 @@
 .date_award {
     width: 60%;
 }
-.date_award tbody tr td{
+@media (max-width: 1024px) {
+    .date_award tbody tr td  {
+        font-size: large;
+    }
+}
+.date_award tbody tr td {
     width: 70%;
 }
