@@ -133,6 +133,7 @@ span a, p a, li a{
     margin: 13px 0;
     padding: 17px;
     border-radius: 7px;
+    font-size: xx-small;
 }
 .citation br {
     user-select: text;

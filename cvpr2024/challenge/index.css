@@ -124,8 +124,19 @@
 }
 
 
-
-.widget {
+.widget_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.widget_container br {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+.widget_container a {
     height: 33px;
-    margin-right: 10px;
+}
+.widget_container a img {
+    height: 100%;
 }
