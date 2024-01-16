@@ -27,9 +27,8 @@
             right: -27.4%;
         }
     } */
-    h2 {
+    h3 {
         margin: 3px 0;
-        font-size: larger;
     }
     span {
         text-align: right;
@@ -63,7 +62,7 @@
         text-align: left;
         margin-right: 0;
     }
-    .timeline .entries .entry h2 {
+    .timeline .entries .entry h3 {
         margin: 3px 0;
     }
     .timeline .entries .entry span {
