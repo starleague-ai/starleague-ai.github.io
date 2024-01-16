@@ -5,20 +5,35 @@
     background-color: rgb(255, 255, 255) !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 1;
+    & li {
+      & a {
+        color: rgb(0, 0, 0, 0.8);
+        padding: 20px;
+        margin: 0px;
+        text-decoration: none;
+      }
+    }
   }
-  .header-shadow li a {
+  /* .header-shadow li a {
     color: rgb(0, 0, 0, 0.8);
     padding: 20px;
     margin: 0px;
     text-decoration: none;
-  }
+  } */
   .nav-scoll {
     background-color: rgb(0, 0, 0, 0.8);
+    & .nav1 {
+      & a {
+        /* color: black; */
+        padding: 0 15px;
+        display: block; /* 将a标签设置为块级标签 */
+      }
+    }
   }
-  .nav-scoll .nav1 a {
-    color: black;
-    display: block; /* 将a标签设置为块级标签 */
-  }
+  /* .nav-scoll .nav1 a {
+    padding: 0 15px;
+    display: block; 
+  } */
 </style>
 <script>
   window.addEventListener("scroll", function () {
@@ -26,23 +41,36 @@
     if (header && window.scrollY > 0) {
       header.classList.add("header-shadow");
       header.classList.add("nav-scoll");
-      console.log( '11111111111',window.scrollY,header.className);
+      console.log("11111111111", window.scrollY, header.className);
     } else if (header) {
       header.classList.remove("header-shadow");
       header.classList.remove("nav-scoll");
-      console.log('222222222222',window.scrollY,header.className);
+      console.log("222222222222", window.scrollY, header.className);
     }
   });
+</script>
+<script>
+  const show = () => {
+    let header_right = document.getElementById("header_right");
+    if (header_right.style.display === "none") {
+      header_right.style.display = "flex";
+    } else {
+      header_right.style.display = "none";
+    }
+  };
+//   document.getElementById("sub-nav").addEventListener("click", function () {
+//     this.classList.toggle("expanded");
+//   });
 </script>
 
 <div class="header" id="header">
   <div class="block_header">
-    <div class="header_left">
+    <div class="header_left" style="z-index: 100">
       <a href="https://opendrivelab.com" target="_blank">
         <img src="/ui2024/style/icon/OpenDriveLab.png" />
       </a>
     </div>
-    <div class="header_right">
+    <div class="header_right" id="header_right">
       <ul>
         <li>
           <a href="https://github.com/sponsors/OpenDriveLab" target="_blank"
@@ -53,17 +81,20 @@
           <a href="https://opendrivelab.com" target="_blank">openDriveLab</a>
         </li>
         <li><a href="#">内容1</a></li>
-        <div class="nav1">
+        <li class="nav1" id="sub-nav">
           <a href="#">内容2</a>
-          <div class="nav2">
-            <a href="#">box11111</a>
-            <a href="#">box2</a>
-            <a href="#">box3</a>
-            <a href="#">box4</a>
-          </div>
-        </div>
+          <ul class="nav2">
+            <li><a href="#">box11111</a></li>
+            <li><a href="#">box2</a></li>
+            <li><a href="#">box3</a></li>
+            <li><a href="#">box4</a></li>
+          </ul>
+        </li>
       </ul>
+    </div>
+
+    <div class="nav-button" onclick="show()">
+      <img src="/ui2024/style/icon/nav.png" />
     </div>
   </div>
 </div>
-

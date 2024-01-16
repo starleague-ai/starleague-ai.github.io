@@ -26,68 +26,160 @@ header.white {
 .header_left a:-webkit-any-link {
   opacity: 1;
 }
+.header_left div {
+  z-index: 100;
+}
 
 .header_right {
   display: flex;
   justify-content: right;
   text-wrap: nowrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .header_right div {
   margin-left: 24px;
 }
 
-ul {
-  width: 400px;
+.header_right ul {
+  min-width: 300px;
   height: 30px;
   line-height: 30px;
-
-  /* background-color: rgb(255, 255, 255); */
-} /* 对导航栏的整体样式进行设置 */
-ul li {
+}
+.header_right ul li {
   list-style: none;
   float: left;
   /* width: 150px; */
   color: #ffffff;
-} /* 删除列表的样式并设置浮动 */
-li a {
+  /* @media screen and (min-width: 1024px) {
+   & li {
+      display: block;
+      width: 100%;
+      padding-left: 0;
+    }
+  } */
+}
+/* @media screen and (max-width: 1024px) {
+  .header_right ul li {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+  }
+} */
+.header_right li a {
   color: white;
   padding: 20px;
   margin: 0px;
   text-decoration: none;
 } /* 设置a标签的样式 */
 
+.nav-button {
+  display: none;
+  float: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .header_right {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; */
+    height: 400px;
+    position: absolute; /* 子 div 设置为绝对定位 */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    opacity: 0.8;
+    color: #606266 !important;
+    & ul {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 30px 0;
+      & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & a {
+          color: #606266;
+        }
+        & ul {
+          height: 220px;
+          position: absolute; /* 子 div 设置为绝对定位 */
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: #fff;
+          opacity: 0.8;
+          color: #606266 !important;
+        }
+        height: 40px;
+        line-height: 30px;
+      }
+    }
+    .header_right ul li {
+      color: #606266 !important;
+    }
+  }
+  /* .nav1 {
+    &:hover {
+      & .nav2 {
+        background-color: #fff;
+        height: 150px;
+        width: 100px;
+      }
+    }
+  } */
+  .nav-button {
+    width: 25px;
+    /* background-color: aqua; */
+    display: block !important;
+    z-index: 100;
+    /* & ::before {
+      content: "\f0c9";
+    } */
+  }
+}
 .nav1 {
   height: 50px;
-  position: relative; /* 设置相对定位 */
-  display: inline-block; /* 让元素具有块级元素和行内元素的特性,即将块级元素转化为内联元素 */
+  position: relative;
+  /* display: inline-block;  */
+  & .nav2 {
+    display: none; /* 将某元素隐藏起来 */
+    position: absolute; /* 绝对定位 */
+    background-color: #f9f9f9;
+    min-width: 81px; /* 最小宽度 */
+    left: -22px;
+    top: 47px;
+    & ul {
+      height: 100% !important;
+      line-height: 100% !important;
+    }
+    & a {
+      color: black;
+      padding: 12px 16px;
+      display: block; /* 将a标签设置为块级标签 */
+      & :hover {
+        background-color: #f9f9f9;
+      } /* 鼠标悬浮时的颜色 */
+    }
+  }
+  &:hover {
+    & .nav2 {
+      display: block;
+      height: auto;
+      left: 18px;
+      padding: 0px;
+      & a {
+        padding: 12px 16px;
+      }
+    } /* 鼠标悬浮在元素上时,变为块级标签 */
+  }
 }
-.nav1 a {
-  color: white;
-  padding: 20px;
-  margin: 0px;
-  text-decoration: none;
-  padding: 0;
-}
-
-.nav2 {
-  display: none; /* 将某元素隐藏起来 */
-  position: absolute; /* 绝对定位 */
-  background-color: #f9f9f9;
-  min-width: 81px; /* 最小宽度 */
-  left: -22px;
-  top: 47px;
-}
-
-.nav2 a {
-  color: black;
-  padding: 12px 16px;
-  display: block; /* 将a标签设置为块级标签 */
-}
-
-.nav2 a:hover {
-  background-color: #f9f9f9;
-} /* 鼠标悬浮时的颜色 */
-
-.nav1:hover .nav2 {
-  display: block;
-} /* 鼠标悬浮在元素上时,变为块级标签 */
