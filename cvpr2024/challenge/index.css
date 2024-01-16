@@ -140,7 +140,7 @@
 
 
 .date_award {
-    width: 60%;
+    width: 67%;
 }
 @media (max-width: 1024px) {
     .date_award tbody tr td  {
@@ -148,5 +148,5 @@
     }
 }
 .date_award tbody tr td {
-    width: 70%;
+    width: 60%;
 }
