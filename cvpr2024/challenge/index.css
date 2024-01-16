@@ -129,7 +129,7 @@
 @media (max-width: 1024px) {
     .rules {
         padding-inline-start: 27px;
-        font-size: smaller;
+        font-size: x-small;
     }
 }
 .faq ul {
@@ -144,7 +144,7 @@
 }
 @media (max-width: 1024px) {
     .date_award tbody tr td  {
-        font-size: larger;
+        font-size: x-large;
     }
 }
 .date_award tbody tr td {
