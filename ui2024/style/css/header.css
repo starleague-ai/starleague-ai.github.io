@@ -1,5 +1,24 @@
+.nav_scoll {
+    background-color: white;
+    box-shadow: 0 0 11px rgb(233, 233, 233);
+    .header_right ul li a {
+        color: rgb(33, 33, 33);
+    }
+    .nav2 {
+        background-color: white;
+    }
+}
+
+
+
 .header img {
     height: 33px;
+}
+@media screen and (max-width: 1024px) {
+    .header img {
+        height: 66px;
+        margin: 11px 0;
+    }
 }
 
 
@@ -79,27 +98,11 @@ header.white {
 
 
 
-.nav_scoll {
-    background-color: white;
-    box-shadow: 0 0 11px rgb(233, 233, 233);
-    .header_right ul li a {
-        color: rgb(33, 33, 33);
-    }
-    .nav2 {
-        background-color: white;
-    }
-}
-
-
-
 .nav_button {
     display: none;
     float: right;
 }
-@media screen and (max-width: 1024px) {
-    .header img {
-        margin: 11px 0;
-    }    
+@media screen and (max-width: 1024px) {  
     .header_right {
         display: none;
         position: absolute;
@@ -110,7 +113,7 @@ header.white {
         & ul {
             flex-direction: column;
             width: 100%;
-            padding-top: 55px;
+            padding-top: 88px;
             padding-left: 0;
             margin: 0;
             & li {

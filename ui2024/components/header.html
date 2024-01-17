@@ -1,103 +1,99 @@
-<link
-  href="/ui2024/style/css/header.css"
-  rel="stylesheet"
-  type="text/css"
-  media="all"
-/>
+<link href="/ui2024/style/css/header.css" rel="stylesheet" type="text/css" media="all"/>
+
+
 
 <script>
-  window.addEventListener("scroll", function () {
-    // var header = document.getElementById("header");
-    // var header_logo = document.getElementById("header_logo");
-    if (header && window.scrollY > 0) {
-      header.classList.add("nav_scoll");
-      header_logo.src = "/ui2024/style/icon/star_league.png";
-      nav_button.src = "/ui2024/style/icon/nav.png";
-    } else if (header) {
-      header.classList.remove("nav_scoll");
-      header_logo.src = "/ui2024/style/icon/star_league_white.png";
-      nav_button.src = "/ui2024/style/icon/nav_white.png";
-    }
-  });
-</script>
-
-<script>
-  const show = () => {
-    // let header_right = document.getElementById("header_right");
-    // console.log('header_right.style.display==========',header_right.style )
-    if (header_right.style.display === "none" || !header_right.style.display) {
-      header_right.style.display = "flex";
-    } else {
-      header_right.style.display = "none";
-    }
-  };
-
-  let sub_nav1 = document.getElementById("sub_nav1");
-
-  document.addEventListener("DOMContentLoaded", function () {
-    var subNav1 = document.getElementById("sub_nav1");
-    var subNav = subNav1.querySelector(".nav2");
-    var sponsorItem = subNav1.nextElementSibling;
-
-    subNav1.addEventListener("click", function (event) {
-      event.preventDefault();
-      if (subNav.style.display === "block") {
-        subNav.style.display = "none";
-        sponsorItem.style.marginTop = "0";
-      } else {
-        subNav.style.display = "block";
-        var subNavHeight = subNav.offsetHeight;
-        console.log('subNavHeight===============',subNavHeight)
-        sponsorItem.style.marginTop = subNavHeight-10 + "px";
-      }
+    window.addEventListener("scroll", function () {
+        if (header && window.scrollY > 0) {
+            header.classList.add("nav_scoll");
+            header_logo.src = "/ui2024/style/icon/star_league.png";
+            nav_button.src = "/ui2024/style/icon/nav.png";
+        } else if (header) {
+            header.classList.remove("nav_scoll");
+            header_logo.src = "/ui2024/style/icon/star_league_white.png";
+            nav_button.src = "/ui2024/style/icon/nav_white.png";
+        }
     });
-  });
 </script>
+
+
+
+<script>
+    const show = () => {
+        if (header_right.style.display === "none" || !header_right.style.display) {
+            header_right.style.display = "flex";
+        } else {
+            header_right.style.display = "none";
+        }
+    };
+
+    let sub_nav1 = document.getElementById("sub_nav1");
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var subNav1 = document.getElementById("sub_nav1");
+        var subNav = subNav1.querySelector(".nav2");
+        var sponsorItem = subNav1.nextElementSibling;
+
+        subNav1.addEventListener("click", function (event) {
+            event.preventDefault();
+            if (subNav.style.display === "block") {
+                subNav.style.display = "none";
+                sponsorItem.style.marginTop = "0";
+            } else {
+                subNav.style.display = "block";
+                var subNavHeight = subNav.offsetHeight;
+                sponsorItem.style.marginTop = subNavHeight-10 + "px";
+            }
+        });
+    });
+</script>
+
+
 
 <div class="header" id="header">
-  <div class="block_header">
-    <div class="header_left">
-      <a href="/">
-        <img id="header_logo" src="/ui2024/style/icon/star_league_white.png" />
-      </a>
-    </div>
+    <div class="block_header">
 
-    <div class="header_right" id="header_right">
-      <ul>
-        <li class="nav1" id="sub_nav1">
-          <a>drop</a>
-          <ul class="nav2">
-            <li><a href="#">box11111</a></li>
-            <li><a href="#">box2</a></li>
-            <li><a href="#">box3</a></li>
-            <li><a href="#">box4</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="https://github.com/sponsors/OpenDriveLab" target="_blank"
-            >🤍 Sponsor</a
-          >
-        </li>
-        <li>
-          <a href="https://opendrivelab.com" target="_blank">openDriveLab</a>
-        </li>
-        <li>
-          <a href="#">内容1</a>
-        </li>
-        <li class="nav1">
-          <a>drop</a>
-          <ul class="nav2">
-            <li><a href="#">box11111</a></li>
-            <li><a href="#">box2</a></li>
-            <li><a href="#">box3</a></li>
-            <li><a href="#">box4</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+        <div class="header_left">
+            <a href="/">
+                <img id="header_logo" src="/ui2024/style/icon/star_league_white.png" />
+            </a>
+        </div>
 
-    <div class="nav_button" onclick="show()">
-      <img id="nav_button" src="/ui2024/style/icon/nav_white.png" />
+        <div class="header_right" id="header_right">
+            <ul>
+                <li class="nav1" id="sub_nav1">
+                    <a>drop</a>
+                    <ul class="nav2">
+                        <li><a href="#">box11111</a></li>
+                        <li><a href="#">box2</a></li>
+                        <li><a href="#">box3</a></li>
+                        <li><a href="#">box4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://github.com/sponsors/OpenDriveLab" target="_blank">🤍 Sponsor</a>
+                </li>
+                <li>
+                    <a href="https://opendrivelab.com" target="_blank">openDriveLab</a>
+                </li>
+                <li>
+                    <a href="#">内容1</a>
+                </li>
+                <li class="nav1">
+                    <a>drop</a>
+                    <ul class="nav2">
+                        <li><a href="#">box11111</a></li>
+                        <li><a href="#">box2</a></li>
+                        <li><a href="#">box3</a></li>
+                        <li><a href="#">box4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav_button" onclick="show()">
+            <img id="nav_button" src="/ui2024/style/icon/nav_white.png" />
+        </div>
+        
     </div>
-  </div>
 </div>
