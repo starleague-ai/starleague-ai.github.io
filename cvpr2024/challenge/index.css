@@ -150,3 +150,17 @@
         font-size: x-large;
     }
 }
+
+
+
+.note {
+    display: flex; 
+    align-items: center;
+}
+.note a img {
+    height: 33px;
+    @media (max-width: 1024px) {
+        height: 44px;
+        margin-right: 11px;
+    }
+}

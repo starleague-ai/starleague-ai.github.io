@@ -234,6 +234,12 @@ span a, p a, li a{
         color: #0c318f;
     }
 }
+@media (max-width: 1024px) {
+    .widget_container a span {
+        font-size: 23px;
+        color: #0c318f;
+    }
+}
 .widget_container a img {
     height: 100%;
 }
