@@ -224,10 +224,16 @@ span a, p a, li a{
         display: none;
     }
 } */
-.widget_container span {
+.widget_container a {
     height: 33px;
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    span {
+        font-size: 23px;
+        color: #0c318f;
+    }
 }
-.widget_container span a img {
+.widget_container a img {
     height: 100%;
 }
