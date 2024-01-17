@@ -117,17 +117,21 @@ header.white {
                 font-size: 33px;
                 height: 66px;
                 line-height: 66px;
-                padding: 11px 0;
-                margin: -1px 0;
+                padding: 22px 0;
+                margin: -7px 0;
                 display: flex;
                 background-color: rgb(133, 72, 72);
                 justify-content: left;
                 padding-left: 4%;
                 align-items: center;
                 & .nav2 {
-                    top: 0;
+                    margin-top: 66px;
                     & li {
-                        padding-left: 12%;
+                        padding-left: 10%;
+                        & a {
+                            padding-left: 4%;
+                            border-left:  3px solid rgb(33, 33, 33);
+                        }
                     }
                 }
             }
