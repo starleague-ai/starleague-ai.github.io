@@ -4,7 +4,7 @@
 @media screen and (max-width: 1024px) {
     .header img {
         height: 66px;
-        margin: 11px 0;
+        margin: 22px 0;
     }
 }
 
@@ -109,7 +109,7 @@ header.white {
         & ul {
             flex-direction: column;
             width: 100%;
-            padding-top: 88px;
+            padding-top: 110px;
             padding-left: 0;
             margin: 0;
             & li {
