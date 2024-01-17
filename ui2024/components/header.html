@@ -67,6 +67,28 @@
 
 
 
+<script>
+    const drop = () => {
+        if (window.innerWidth <= 1024) {
+            console.log(event.currentTarget.nextElementSibling);
+            console.log(event.currentTarget.children[1].offsetHeight)
+            if (event.currentTarget.children[1].style.display === "none") {
+                event.currentTarget.children[1].style.display = "block";
+                if (event.currentTarget.nextElementSibling) {
+                    event.currentTarget.nextElementSibling.style.marginTop = event.currentTarget.children[1].offsetHeight;
+                }
+            } else {
+                event.currentTarget.children[1].style.display = "none";
+                if (event.currentTarget.nextElementSibling) {
+                    event.currentTarget.nextElementSibling.style.marginTop = 0;
+                }
+            }
+        }
+    }
+</script>
+
+
+
 <div class="header" id="header">
     <div class="block_header">
 
@@ -78,7 +100,7 @@
 
         <div class="header_right" id="header_right">
             <ul>
-                <li class="nav1" id="sub_nav1">
+                <li class="nav1" onclick="drop()">
                     <a>drop</a>
                     <ul class="nav2">
                         <li><a href="#">box11111</a></li>
@@ -96,7 +118,7 @@
                 <li>
                     <a href="#">内容1</a>
                 </li>
-                <li class="nav1">
+                <li class="nav1" onclick="drop()">
                     <a>drop</a>
                     <ul class="nav2">
                         <li><a href="#">box11111</a></li>
