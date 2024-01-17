@@ -215,7 +215,7 @@ span a, p a, li a{
 
 .widget_container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: space-between;
 }
 /* .widget_container br {
@@ -225,6 +225,7 @@ span a, p a, li a{
 } */
 .widget_container span {
     height: 33px;
+    flex-grow: 1;
 }
 .widget_container span a img {
     height: 100%;
