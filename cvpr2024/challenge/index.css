@@ -133,7 +133,7 @@
 @media screen and (max-width: 1024px) {
     .rules {
         padding-inline-start: 27px;
-        font-size: 17px;
+        font-size: 17px !important;
     }
 }
 .faq ul {
@@ -155,7 +155,7 @@
     }
     .date_award tbody tr td  {
         width: 70%;
-        font-size: 17px;
+        font-size: 17px !important;
     }
 }
 
