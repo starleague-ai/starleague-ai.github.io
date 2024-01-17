@@ -196,15 +196,15 @@
             <div class="glance_left">
                 <div class="planning">
                     <p>
-                        <a href="#">
+                        <a href="#end_to_end_driving_at_scale">
                             End-to-End Driving at Scale
                         </a>
                         <br><br><br>
-                        <a href="#">
+                        <a href="#driving_with_language">
                             Driving with Language
                         </a>
                         <br><br><br>
-                        <a href="#">
+                        <a href="#carla">
                             CARLA Autonomous Driving Challenge
                         </a>
                     </p>
@@ -217,11 +217,11 @@
             <div class="glance_right">
                 <div class="perception">
                     <p>
-                        <a href="#">
+                        <a href="#occupancy_and_flow">
                             Occupancy and Flow
                         </a>
                         <br><br><br>
-                        <a href="#">
+                        <a href="#mapless_driving">
                             Mapless Driving
                         </a>
                     </p>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="prediction">
                     <p>
-                        <a href="#">
+                        <a href="#predictive_world_model">
                             Predictive World Model
                         </a>
                     </p>
@@ -249,12 +249,12 @@
 
     <div class="block">
         <div class="navigator">
-            <a href="#">End-to-End Driving at Scale</a>
-            <a href="#">Driving with Language</a>
-            <a href="#">CARLA Autonomous Driving Challenge</a>
-            <a href="#">Occupancy and Flow</a>
-            <a href="#">Mapless Driving</a>
-            <a href="#">Predictive World Model</a>
+            <a href="#end_to_end_driving_at_scale">End-to-End Driving at Scale</a>
+            <a href="#predictive_world_model">Predictive World Model</a>
+            <a href="#occupancy_and_flow">Occupancy and Flow</a>
+            <a href="#driving_with_language">Driving with Language</a>
+            <a href="#carla">CARLA Autonomous Driving Challenge</a>
+            <a href="#mapless_driving">Mapless Driving</a>
             <br><br>
         </div>
     </div>
@@ -567,10 +567,10 @@
 
 
 
-    <div class="block_right left_right" id="occupancy_and_flow">
+    <div class="block_right left_right" id="driving_with_language">
 
         <div style="flex-grow: 7;">
-            <a class="track_title" href="#driving with Language">
+            <a class="track_title" href="#driving_with_language">
                 <h2>
                     Teaser Track
                     <img class="link_img"/>
@@ -588,7 +588,7 @@
 
             <h2>Task Description</h2>
             <span>
-                The representation of 3D bounding boxes is not enough to describe general objects (obstacles). Instead, inspired by the concept in Robotics, we deem general object detection as an occupancy representation to cover more irregularly shaped objects (e.g., protruding). The goal of this task is to predict the 3D occupancy of the complete scene and the flow of the foreground objects given the input image from six cameras. 
+                Incorporating linguistic information, DriveLM connects Large Language Models (LLM) and autonomous driving systems, and eventually introduces the reasoning ability of LLM to make decisions and ensure explainable planning. Given multi-view images as inputs, models are required to answer questions covering various aspects of driving.
             </span>
             
             <br>
@@ -605,34 +605,18 @@
             </table>
 
             <br>
-            <h2>Award</h2>
-            <table class="date_award">
-                <tbody>
-                    <tr>
-                        <td><img src='/ui2024/style/icon/bulb.png' style="width: 20px; user-select: none; margin-right: 7px;"/>Innovation Award</td><td>USD $18,000</td>
-                    </tr>
-                    <tr>
-                        <td><img src='/ui2024/style/icon/rank01.png' style="width: 20px; user-select: none; margin-right: 7px;"/>Outstanding Champion</td><td>USD $9,000</td>
-                    </tr>
-                    <tr>
-                        <td><img src='/ui2024/style/icon/rank02.png' style="width: 20px; user-select: none; margin-right: 7px;"/>Honorable Runner-up</td><td>USD $3,000</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <br>
             <h2>Citation</h2>
             <span>
                 Please consider citing our work if the challenge helps your research with the following BibTex:
             </span>
             <div class="citation">
-                @article{sima2023_occnet,
+                @article{sima2023drivelm,
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;title={Scene as Occupancy},
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={DriveLM: Driving with Graph Visual Question Answering},
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;author={Chonghao Sima and Wenwen Tong and Tai Wang and Li Chen and Silei Wu and Hanming Deng  and Yi Gu and Lewei Lu and Ping Luo and Dahua Lin and Hongyang Li},
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Sima, Chonghao and Renz, Katrin and Chitta, Kashyap and Chen, Li and Zhang, Hanxue and Xie, Chengen and Luo, Ping and Geiger, Andreas and Li, Hongyang},
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+                    &nbsp;&nbsp;&nbsp;&nbsp;journal={arXiv preprint arXiv:2312.14150},
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
                     <br>
@@ -643,10 +627,10 @@
             <h2>Contact</h2>
             <ul class="rules">
                 <li>
-                    Haisong Liu (OpenDriveLab), <code>afterthat97@gmail.com</code>
+                    Sima Chonghao (OpenDriveLab), <code>chonghaosima@gmail.com</code>
                 </li>
                 <li>
-                    Slack channel: <code>#occupancy-and-flow-2024</code>
+                    Slack channel: <code>#driving-with-language-2024</code>
                 </li>
             </ul>
 
@@ -654,18 +638,219 @@
             <h2>Related Literature</h2>
             <ul class="rules">
                 <li>
-                    <a href="https://arxiv.org/abs/2306.02851" target="_blank">
-                        Scene as Occupancy
+                    <a href="https://arxiv.org/abs/2312.14150" target="_blank">
+                        DriveLM: Driving with Graph Visual Question Answering
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_left left_right" id="carla">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#carla">
+                <h2>
+                    Teaser Track
+                    <img class="link_img"/>
+                </h2>
+                <h1>CARLA Autonomous Driving Challenge</h1>
+            </a>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                To verify the effectiveness of AD systems, we need an ultimate planning framework with a closed-loop setting. The CARLA AD Leaderboard challenges agents to drive through a set of predefined routes. For each route, agents will be initialized at a starting point and directed to drive to a destination point, provided with a description of the route through GPS style coordinates, map coordinates or route instructions. Routes are defined in a variety of situations, including freeways, urban areas, residential districts and rural settings. The Leaderboard evaluates AD agents in a variety of weather conditions, including daylight scenes, sunset, rain, fog, and night, among others.
+            </span>
+            
+            <br>
+            <h2>Date</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td>February 01, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td>May 15, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @inproceedings{dosovitskiy2017carla,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={CARLA: An open urban driving simulator},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Dosovitskiy, Alexey and Ros, German and Codevilla, Felipe and Lopez, Antonio and Koltun, Vladlen},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={Conference on robot learning},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2017}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Slack channel: <code>#carla-2024</code>
+                </li>
+                <li>
+                    <a href="https://discord.gg/kJM5DhmKHJ">Discord</a>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://proceedings.mlr.press/v78/dosovitskiy17a.html" target="_blank">
+                        CARLA: An Open Urban Driving Simulator
                     </a>
                 </li>
                 <li>
-                    <a href="https://arxiv.org/abs/2003.04618" target="_blank">
-                        Convolutional Occupancy Networks
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/html/Shao_ReasonNet_End-to-End_Driving_With_Temporal_and_Global_Reasoning_CVPR_2023_paper.html" target="_blank">
+                        ReasonNet: End-to-End Driving With Temporal and Global Reasoning
                     </a>
                 </li>
                 <li>
-                    <a href="https://arxiv.org/abs/2203.03875" target="_blank">
-                        Occupancy Flow Fields for Motion Forecasting in Autonomous Driving
+                    <a href="https://proceedings.mlr.press/v205/shao23a.html" target="_blank">
+                        Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html" target="_blank">
+                        Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="block_right left_right" id="mapless_driving">
+
+        <div style="flex-grow: 7;">
+            <a class="track_title" href="#mapless_driving">
+                <h2>
+                    Teaser Track
+                    <img class="link_img"/>
+                </h2>
+                <h1>Mapless Driving</h1>
+            </a>
+
+            <br>
+
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div style="flex-grow: 16;">
+
+            <h2>Task Description</h2>
+            <span>
+                AD without HD maps demands a higher level of active scene understanding. This challenge aims to explore the boundaries of scene reasoning capabilities. Neural networks take multi-view images and Standard-definition (SD) Map as input, then provide not only perception results of lanes and traffic elements but also topology relationships among lanes and between lanes and traffic elements simultaneously. 
+
+            </span>
+            
+            <br>
+            <h2>Date</h2>
+            <table class="date_award">
+                <tbody>
+                    <tr>
+                        <td>Test Server Open</td><td>March 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Test Server Close</td><td>June 01, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h2>Citation</h2>
+            <span>
+                Please consider citing our work if the challenge helps your research with the following BibTex:
+            </span>
+            <div class="citation">
+                @inproceedings{wang2023openlanev2,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping}, 
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Wang, Huijie and Li, Tianyu and Li, Yang and Chen, Li and Sima, Chonghao and Liu, Zhenbo and Wang, Bangjun and Jia, Peijin and Wang, Yuting and Jiang, Shengyin and Wen, Feng and Xu, Hang and Luo, Ping and Yan, Junchi and Zhang, Wei and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={NeurIPS},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2023}
+                    <br>
+                }
+            </div>
+            <div class="citation">
+                @inproceedings{li2023lanesegnet,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;title={LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;author={Li, Tianyu and Jia, Peijin and Wang, Bangjun and Chen, Li and Jiang, Kun and Yan, Junchi and Li, Hongyang},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;booktitle={ICLR},
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;year={2024}
+                    <br>
+                }
+            </div>
+
+            <br>
+            <h2>Contact</h2>
+            <ul class="rules">
+                <li>
+                    Tianyu Li (OpenDriveLab), <code>sephy.fine@gmail.com</code>
+                </li>
+                <li>
+                    Slack channel: <code>#mapless-driving-2024</code>
+                </li>
+            </ul>
+
+            <br>
+            <h2>Related Literature</h2>
+            <ul class="rules">
+                <li>
+                    <a href="https://arxiv.org/abs/2304.10440" target="_blank">
+                        OpenLane-V2: A Topology Reasoning Benchmark for Unified 3D HD Mapping
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2312.16108" target="_blank">
+                        LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2304.05277" target="_blank">
+                        Graph-based Topology Reasoning for Driving Scenes
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2208.14437" target="_blank">
+                        MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/abs/2203.11089" target="_blank">
+                        PersFormer: 3D Lane Detection via Perspective Transformer and the OpenLane Benchmark
                     </a>
                 </li>
             </ul>
