@@ -89,6 +89,15 @@ header.white {
     display: none;
     float: right;
 }
+@media screen and (max-width: 1024px) {
+    .nav_button {
+        display: block !important;
+        z-index: 1000;
+    }
+}
+
+
+
 @media screen and (max-width: 1024px) {  
     .header_right {
         display: none;
@@ -122,10 +131,6 @@ header.white {
                 }
             }
         }
-    }
-    .nav_button {
-        display: block !important;
-        z-index: 1000;
     }
 }
 
