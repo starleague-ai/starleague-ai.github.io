@@ -68,6 +68,7 @@ header.white {
             display: block;
             height: auto;
             padding: 0;
+            transition: background-color 0.3s;
             & a {
                 display: block;
             }
