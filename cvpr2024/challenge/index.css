@@ -6,8 +6,7 @@
     background-position: center;
 }
 .banner_container {
-    padding: max(33px, 3%);
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,9 +15,6 @@
     display: flex;
     margin-top: 33px;
 }
-
-
-
 .banner_logo {
     flex-direction: row;
 }
@@ -116,7 +112,7 @@
     margin: 0;
 }
 .track_title h1 {
-    font-size: 500%;
+    font-size: 400%;
     margin: 0;
 }
 
@@ -126,10 +122,10 @@
     margin: 0;
     padding-inline-start: 17px;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .rules {
         padding-inline-start: 27px;
-        font-size: x-small;
+        font-size: small;
     }
 }
 .faq ul {
@@ -145,12 +141,26 @@
 .date_award tbody tr td {
     width: 60%;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .date_award {
         width: 80%;
     }
     .date_award tbody tr td  {
         width: 70%;
         font-size: x-large;
+    }
+}
+
+
+
+.note {
+    display: flex; 
+    align-items: center;
+}
+.note a img {
+    height: 33px;
+    @media screen and (max-width: 1024px) {
+        height: 44px;
+        margin-right: 11px;
     }
 }
