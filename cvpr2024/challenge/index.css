@@ -122,7 +122,7 @@
     margin: 0;
     padding-inline-start: 17px;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .rules {
         padding-inline-start: 27px;
         font-size: x-small;
@@ -141,7 +141,7 @@
 .date_award tbody tr td {
     width: 60%;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .date_award {
         width: 80%;
     }
@@ -159,7 +159,7 @@
 }
 .note a img {
     height: 33px;
-    @media (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
         height: 44px;
         margin-right: 11px;
     }

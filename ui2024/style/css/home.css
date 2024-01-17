@@ -35,7 +35,7 @@
     font-weight: bold;
     color: rgb(233, 233, 233);
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .banner_title_en span, .banner_title_en span a {
         width: 100%;
     }
