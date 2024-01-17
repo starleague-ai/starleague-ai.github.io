@@ -105,7 +105,7 @@ span a, p a, li a{
 }
 .navigator a, .navigator br {
     margin-right: max(22px, 2%);
-    font-size: small;
+    font-size: x-small;
     @media screen and (max-width: 1024px) {
         display: none;
     }
