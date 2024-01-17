@@ -1,16 +1,3 @@
-.nav_scoll {
-    background-color: white;
-    box-shadow: 0 0 11px rgb(233, 233, 233);
-    .header_right ul li a {
-        color: rgb(33, 33, 33);
-    }
-    .nav2 {
-        background-color: white;
-    }
-}
-
-
-
 .header img {
     height: 33px;
 }
@@ -135,5 +122,18 @@ header.white {
     .nav_button {
         display: block !important;
         z-index: 1000;
+    }
+}
+
+
+
+.nav_scoll {
+    background-color: white;
+    box-shadow: 0 0 11px rgb(233, 233, 233);
+    .header_right ul li a {
+        color: rgb(33, 33, 33);
+    }
+    .nav2 {
+        background-color: white;
     }
 }
