@@ -1,10 +1,6 @@
-/* 设置html元素的字体大小为 16px，即 1rem = 16px */
-html {
-    font-size: 16px;
-}
 body {
     margin: 0;
-    font-family: San Francisco, system-ui;
+    font-family: "San Francisco", "system-ui";
 }
 
 
@@ -18,11 +14,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 p, span, li {
     text-align: justify;
-}
-span{
-    font-size: 1rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 设置字体系列 */
-    font-weight: 400; /* 设置字体粗细 */
 }
 br {
     user-select: none;
