@@ -19,6 +19,7 @@
     background-color: transparent;
     transition: background-color 0.3s;
     z-index: 1000;
+    /* box-shadow: 0 0 0 rgb(233, 233, 233); */
 }
 header.white {
     background-color: white;
@@ -67,11 +68,10 @@ header.white {
         display: none;
     }
     &:hover {
-        height: 200px;
         & .nav2 {
             position: absolute;
-            top: 47px;
-            left: 0px;
+            top: 49px;
+            left: -11px;
             display: block;
             height: auto;
             padding: 0;
@@ -104,16 +104,20 @@ header.white {
             padding-left: 0;
             margin: 0;
             & li {
+                font-size: 27px;
+                height: 66px;
+                line-height: 66px;
+                padding: 11px 0;
+                margin: -1px 0;
                 display: flex;
                 background-color: rgb(133, 72, 72);
                 justify-content: left;
                 padding-left: 4%;
                 align-items: center;
-                margin: 0px;
                 & ul {
                     top: 0;
                     & li {
-                        padding-left: 80px;
+                        padding-left: 12%;
                     }
                 }
             }

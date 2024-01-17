@@ -3,15 +3,28 @@
 
 
 <script>
+    const as_transparent = () => {
+        header.classList.remove("nav_scoll");
+        header_logo.src = "/ui2024/style/icon/star_league_white.png";
+        nav_button.src = "/ui2024/style/icon/nav_white.png";
+    }
+    const as_white = () => {
+        header.classList.add("nav_scoll");
+        header_logo.src = "/ui2024/style/icon/star_league.png";
+        nav_button.src = "/ui2024/style/icon/nav.png";
+    }
+</script>
+
+
+
+<script>
     window.addEventListener("scroll", function () {
-        if (header && window.scrollY > 0) {
-            header.classList.add("nav_scoll");
-            header_logo.src = "/ui2024/style/icon/star_league.png";
-            nav_button.src = "/ui2024/style/icon/nav.png";
-        } else if (header) {
-            header.classList.remove("nav_scoll");
-            header_logo.src = "/ui2024/style/icon/star_league_white.png";
-            nav_button.src = "/ui2024/style/icon/nav_white.png";
+        if (window.scrollY > 0) {
+            as_white();
+        } else {
+            if (header_right.style.display != "flex") {
+                as_transparent();
+            }
         }
     });
 </script>
@@ -22,30 +35,34 @@
     const show = () => {
         if (header_right.style.display === "none" || !header_right.style.display) {
             header_right.style.display = "flex";
+            as_white();
         } else {
             header_right.style.display = "none";
+            if (window.scrollY === 0) {
+                as_transparent();
+            }
         }
     };
 
-    let sub_nav1 = document.getElementById("sub_nav1");
+    // let sub_nav1 = document.getElementById("sub_nav1");
 
-    document.addEventListener("DOMContentLoaded", function () {
-        var subNav1 = document.getElementById("sub_nav1");
-        var subNav = subNav1.querySelector(".nav2");
-        var sponsorItem = subNav1.nextElementSibling;
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var subNav1 = document.getElementById("sub_nav1");
+    //     var subNav = subNav1.querySelector(".nav2");
+    //     var sponsorItem = subNav1.nextElementSibling;
 
-        subNav1.addEventListener("click", function (event) {
-            event.preventDefault();
-            if (subNav.style.display === "block") {
-                subNav.style.display = "none";
-                sponsorItem.style.marginTop = "0";
-            } else {
-                subNav.style.display = "block";
-                var subNavHeight = subNav.offsetHeight;
-                sponsorItem.style.marginTop = subNavHeight-10 + "px";
-            }
-        });
-    });
+    //     subNav1.addEventListener("click", function (event) {
+    //         event.preventDefault();
+    //         if (subNav.style.display === "block") {
+    //             subNav.style.display = "none";
+    //             sponsorItem.style.marginTop = "0";
+    //         } else {
+    //             subNav.style.display = "block";
+    //             var subNavHeight = subNav.offsetHeight;
+    //             sponsorItem.style.marginTop = subNavHeight-10 + "px";
+    //         }
+    //     });
+    // });
 </script>
 
 
