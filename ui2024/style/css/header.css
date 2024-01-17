@@ -19,7 +19,6 @@
     background-color: transparent;
     transition: background-color 0.3s;
     z-index: 1000;
-    /* box-shadow: 0 0 0 rgb(233, 233, 233); */
 }
 header.white {
     background-color: white;
