@@ -48,13 +48,28 @@
 
 
 <script>
+    document.body.addEventListener("click", () => {
+        if (window.innerWidth <= 1024) {
+            eles = document.getElementsByClassName("nav2");
+            for (var i = 0; i < eles.length; i++) {
+                eles[i].style.display = "none";
+            }
+        }
+    })
     const drop = () => {
         if (window.innerWidth <= 1024) {
+            event.preventDefault();
+            event.stopPropagation();
             if (event.currentTarget.children[1].style.display === "none") {
                 event.currentTarget.children[1].style.display = "block";
             } else {
                 event.currentTarget.children[1].style.display = "none";
             }
+        }
+    }
+    const stop_propagation = () => {
+        if (window.innerWidth <= 1024) {
+            event.stopPropagation();
         }
     }
 </script>
@@ -76,10 +91,10 @@
                 <li class="nav1" onclick="drop()">
                     <a>drop</a>
                     <ul class="nav2">
-                        <li><a href="#" target="_blank">box11111</a></li>
-                        <li><a href="#" target="_blank">box2</a></li>
-                        <li><a href="#" target="_blank">box3</a></li>
-                        <li><a href="#" target="_blank">box4</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box11111</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box2</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box3</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box4</a></li>
                     </ul>
                 </li>
 
@@ -92,10 +107,10 @@
                 <li class="nav1" onclick="drop()">
                     <a>drop</a>
                     <ul class="nav2">
-                        <li><a href="#" target="_blank">box11111</a></li>
-                        <li><a href="#" target="_blank">box2</a></li>
-                        <li><a href="#" target="_blank">box3</a></li>
-                        <li><a href="#" target="_blank">box4</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box11111</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box2</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box3</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box4</a></li>
                     </ul>
                 </li>
 
