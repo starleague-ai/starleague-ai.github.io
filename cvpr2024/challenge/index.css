@@ -134,6 +134,17 @@
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 设置字体系列 */
         font-weight: 400; /* 设置字体粗细 */
     }
+    html {
+        font-size: 16px !important; 
+    }
+    span{
+        font-size: 1.25rem;
+        line-height: 2rem;
+        text-indent: 2em;
+        text-align: left;
+        font-family: "San Francisco", "system-ui","Helvetica Neue", Helvetica, Arial, sans-serif; /* 设置字体系列 */
+        font-weight: 400; /* 设置字体粗细 */
+    }
 }
 .faq ul {
     margin-top: 3;
@@ -152,10 +163,15 @@
     .date_award {
         width: 80%;
     }
+    html {
+        font-size: 16px !important; 
+    }
     .date_award tbody tr td  {
-        width: 70%;
-        font-size: 1rem;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 设置字体系列 */
+        font-size: 1.25rem;
+        line-height: 2rem;
+        text-indent: 2em;
+        text-align: left;
+        font-family: "San Francisco", "system-ui","Helvetica Neue", Helvetica, Arial, sans-serif; /* 设置字体系列 */
         font-weight: 400; /* 设置字体粗细 */
     }
 }
