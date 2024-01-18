@@ -57,7 +57,7 @@
                 eles[i].style.display = "none";
             }
         }
-    })
+    });
     const drop = () => {
         if (window.innerWidth <= 1024) {
             event.preventDefault();
@@ -74,12 +74,12 @@
                 event.currentTarget.children[1].style.display = "none";
             }
         }
-    }
+    };
     const stop_propagation = () => {
         if (window.innerWidth <= 1024) {
             event.stopPropagation();
         }
-    }
+    };
 </script>
 
 
