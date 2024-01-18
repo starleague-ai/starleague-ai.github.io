@@ -18,7 +18,7 @@
     flex-direction: row;
 }
 .banner_logo img {
-    height: 99px;
+    height: 66px;
     margin-right: 33px;
 }
 
@@ -28,11 +28,11 @@
     flex-direction: row;
 }
 .banner_title_cn img {
-    height: 192px;
+    height: 128px;
     margin-right: 33px;
 }
 .banner_title_cn span {
-    font-size: 69px;
+    font-size: 48px;
     font-weight: bold;
     color: rgb(233, 233, 233);
 }
@@ -40,7 +40,7 @@
 
 
 .banner_title_en span {
-    font-size: 45px;
+    font-size: 32px;
     font-weight: bold;
     color: rgb(233, 233, 233);
 }
@@ -48,7 +48,7 @@
 
 
 .banner_content span, .banner_content span a {
-    font-size: 33px;
+    font-size: 23px;
     color: rgb(233, 233, 233);
 }
 
