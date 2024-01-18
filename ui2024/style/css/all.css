@@ -80,6 +80,9 @@ span a, p a, li a{
 .left_right {
     padding-top: max(33px, 3%);
     padding-bottom: max(33px, 3%);
+    @media screen and (max-width: 1024px) {
+        padding-bottom: max(55px, 5%);
+    }
 }
 .block_left div, .block_right div {
     display: flex;
