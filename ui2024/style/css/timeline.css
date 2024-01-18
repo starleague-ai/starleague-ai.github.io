@@ -1,13 +1,9 @@
-.timeline {
-    width: 700px;
-}
-
 .timeline > :before {
     content: "";
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left: 300px;
+    left: 35%;
     width: 3px;
     border-radius: 3px;
     background-color: rgb(33, 33, 33);
@@ -17,9 +13,9 @@
 }
 
 .timeline > .entries > .entry {
-    margin-right: 720px;
+    margin-right: 71.5%;
     text-align: right;
-    .title {
+    /* .title {
         position: relative;
         &:before {
             content: "";
@@ -28,9 +24,9 @@
             height: 13px;
             background-color: rgb(33, 33, 33);
             border-radius: 100%;
-            right: -66px;
+            right: -27.4%;
         }
-    }
+    } */
     h3 {
         margin: 3px 0;
     }
@@ -48,13 +44,33 @@
         margin-left: 42%;
         text-align: left;
         float: right;
-        .title {
+        /* .title {
             &:before {
                 left: -13.6%;
             }
-        }
+        } */
         .content {
             text-align: left;
         }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .timeline > :before {
+        display: none;
+    }
+    .timeline > .entries > .entry {
+        text-align: left;
+        margin-right: 0;
+    }
+    .timeline .entries .entry h3 {
+        margin: 3px 0;
+    }
+    .timeline .entries .entry span {
+        margin-bottom: 7px;
+    }
+    .timeline .entries .entry code {
+        font-weight: normal;
+        font-size: small;
+        background-color: white;
     }
 }
