@@ -10,12 +10,6 @@
         background-position: 30%;
     }
 }
-.banner_container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 .banner_container div {
     display: flex;
     margin-top: 33px;
@@ -24,7 +18,7 @@
     flex-direction: row;
 }
 .banner_logo img {
-    height: 66px;
+    height: 99px;
     margin-right: 33px;
 }
 
@@ -34,12 +28,11 @@
     flex-direction: row;
 }
 .banner_title_cn img {
-    height: 128px;
+    height: 192px;
     margin-right: 33px;
 }
 .banner_title_cn span {
-    align-items: center;
-    font-size: 50px;
+    font-size: 69px;
     font-weight: bold;
     color: rgb(233, 233, 233);
 }
@@ -47,7 +40,7 @@
 
 
 .banner_title_en span {
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bold;
     color: rgb(233, 233, 233);
 }
@@ -55,7 +48,7 @@
 
 
 .banner_content span, .banner_content span a {
-    font-size: 23px;
+    font-size: 33px;
     color: rgb(233, 233, 233);
 }
 

@@ -7,12 +7,6 @@
     background-blend-mode: overlay; 
     background-color: rgba(33, 33, 33, .3)
 }
-.banner_container {
-    height: 88%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
 .banner_container div {
     display: flex;
     margin-top: 33px;
