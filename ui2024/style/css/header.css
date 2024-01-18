@@ -138,6 +138,7 @@ header.white {
                         margin: -3px 0;
                         width: 100%;
                         & a {
+                            display: block;
                             padding-left: 4%;
                             border-left:  7px solid rgb(33, 33, 33);
                         }
