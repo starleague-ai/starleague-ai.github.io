@@ -60,6 +60,12 @@
         if (window.innerWidth <= 1024) {
             event.preventDefault();
             event.stopPropagation();
+            eles = document.getElementsByClassName("nav2");
+            for (var i = 0; i < eles.length; i++) {
+                if (eles[i] != event.currentTarget.children[1]) {
+                    eles[i].style.display = "none";
+                }
+            }
             if (event.currentTarget.children[1].style.display === "none") {
                 event.currentTarget.children[1].style.display = "block";
             } else {
@@ -95,6 +101,7 @@
                         <li><a href="#" target="_blank" onclick="stop_propagation()">box2</a></li>
                         <li><a href="#" target="_blank" onclick="stop_propagation()">box3</a></li>
                         <li><a href="#" target="_blank" onclick="stop_propagation()">box4</a></li>
+                        <li><a href="#" target="_blank" onclick="stop_propagation()">box11111</a></li>
                     </ul>
                 </li>
 

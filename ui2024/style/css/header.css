@@ -83,6 +83,7 @@ header.white {
             height: auto;
             padding: 0 11px 0 0;
             transition: background-color 0.3s;
+            z-index: 1000;
             & a {
                 display: block;
             }
