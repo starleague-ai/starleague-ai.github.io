@@ -36,7 +36,9 @@
         code {
             font-weight: normal;
             font-size: small;
-            background-color: white;
+            background-color: transparent;
+            padding-right: 0;
+            margin-right: 0;
         }
     }
     &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(8) {
