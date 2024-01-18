@@ -139,7 +139,7 @@ header.white {
                         width: 100%;
                         & a {
                             padding-left: 4%;
-                            border-left:  3px solid rgb(33, 33, 33);
+                            border-left:  7px solid rgb(33, 33, 33);
                         }
                     }
                 }
