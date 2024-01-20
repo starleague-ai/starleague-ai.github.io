@@ -114,42 +114,41 @@ header.white {
         right: 0;
         top: 0;
         bottom: 0;
+        width: 100%;
         & ul {
           flex-direction: column;
           width: 100%;
-          padding-top: 110px;
+          padding-top: 111px;
           padding-left: 0;
           margin: 0;
             & li {
+                width: 100%;
                 font-size: 44px;
                 height: 66px;
                 line-height: 66px;
-                padding: 22px 0;
+                padding: 22px 6%;
                 margin: -1px 0;
                 display: flex;
                 background-color: rgb(133, 72, 72);
                 justify-content: left;
-                padding-left: 4%;
                 align-items: center;
                 flex-direction: column;
                 position: relative;
                 & .nav2 {
-                      display: none;
-                      margin-top: 85px;
-                      position: absolute;
-                      left: -11px;
-                      height: auto;
-                      padding: 0 11px 0 0;
-                      transition: background-color 0.3s;
-                      z-index: 2000;
-                      & li {
-                          padding-left: 10%;
-                          margin: -3px 0;
-                          width: 100%;
-                          & a {
-                              padding-left: 4%;
-                              border-left: 7px solid rgb(33, 33, 33);
-                          }
+                    display: none;
+                    margin-top: 88px;
+                    position: absolute;
+                    padding: 0 4% 0 0;
+                    transition: background-color 0.3s;
+                    z-index: 2000;
+                    & li {
+                        padding-left: 12%;
+                        margin: -1px 0;
+                        width: 100%;
+                        & a {
+                            padding-left: 4%;
+                            border-left: 7px solid rgb(33, 33, 33);
+                        }
                     }
                 }
             }
