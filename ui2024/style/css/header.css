@@ -40,10 +40,14 @@ header.white {
 }
 
 
-
+.header_left {
+    z-index: 1000;
+}
 .header_left a:any-link, .header_left a:-webkit-any-link {
     opacity: 1;
 }
+
+
 
 .header_right {
     display: flex;
@@ -67,14 +71,14 @@ header.white {
     width: 100%;
 }
 @media screen and (min-width: 1024px) {
-    .nav1 {
+    .header_right ul li {
         height: 66px;
         position: relative;
-        & .nav2 {
+        & .dropdown {
             display: none;
         }
         &:hover {
-            & .nav2 {
+            & .dropdown {
                 position: absolute;
                 top: 49px;
                 left: -11px;
@@ -126,7 +130,7 @@ header.white {
                 font-size: 44px;
                 height: 66px;
                 line-height: 66px;
-                padding: 22px 6%;
+                padding: 22px 6% 44px 6%;
                 margin: -1px 0;
                 display: flex;
                 background-color: rgb(133, 72, 72);
@@ -134,7 +138,7 @@ header.white {
                 align-items: center;
                 flex-direction: column;
                 position: relative;
-                & .nav2 {
+                & .dropdown {
                     display: none;
                     margin-top: 88px;
                     position: absolute;
@@ -143,8 +147,6 @@ header.white {
                     z-index: 2000;
                     & li {
                         padding-left: 12%;
-                        margin: -1px 0;
-                        width: 100%;
                         & a {
                             padding-left: 4%;
                             border-left: 7px solid rgb(33, 33, 33);
@@ -156,13 +158,15 @@ header.white {
     }
 }
 
+
+
 .nav_scoll {
     background-color: white;
     box-shadow: 0 0 11px rgb(233, 233, 233);
     .header_right ul li a {
         color: rgb(33, 33, 33);
     }
-    .nav2 {
+    .dropdown {
         background-color: white;
     }
 }
