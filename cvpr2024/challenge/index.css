@@ -14,12 +14,15 @@
     display: flex;
     margin-top: 33px;
 }
-.banner_logo {
+.banner_logo, .banner_logo_u {
     flex-direction: row;
 }
 .banner_logo img {
     height: 66px;
     margin-right: 33px;
+}
+.banner_logo_u img {
+    height: 33px;
 }
 
 
