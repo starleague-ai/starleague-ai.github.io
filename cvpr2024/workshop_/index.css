@@ -34,6 +34,7 @@
     font-size: 99px;
     font-weight: bold;
     color: rgb(233, 233, 233);
+    text-align: left;
 }
 
 
@@ -97,4 +98,7 @@
 .track_title h1 {
     font-size: 333%;
     margin: 0;
+}
+.navigator a {
+    font-size: large;
 }
