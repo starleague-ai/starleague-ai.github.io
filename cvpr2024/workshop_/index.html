@@ -1,0 +1,626 @@
+<head>
+    <title>Workshop at CVPR 2024 | Star League</title>
+    <meta name="keywords" content="FM4AS, Star League, CVPR 2024, Workshop, Autonomous Driving, Autonomous Agent, Embodied AI">
+
+    <link rel="icon" type="image/png" href="/ui2024/style/icon/star_league_square.png">
+
+    <link href="/ui2024/style/css/all.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-07T97F5TB5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-07T97F5TB5');
+</script>
+
+
+
+<script>
+    $.get("/ui2024/components/header.html",function(result){
+        $("body").prepend(result)
+    })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+<body>
+
+    
+
+    <div class="banner">
+        <div class="banner_container">
+
+            <div class="banner_logo">
+                <img loading="lazy" src="/ui2024/style/icon/cvpr/cvpr2024_white.svg"/>
+                <img loading="lazy" src="/ui2024/style/icon/cvpr/ieee_cs_white.png"/>
+            </div>
+            
+            <div class="banner_title">
+                <span>Foundation Models for Autonomous Systems</span>
+            </div>
+
+            <div class="banner_title_sub">
+                <span><a href="/cvpr2024/challenge/">Autonomous Driving Challenge</a></span>
+            </div>
+
+            <div class="banner_content">
+                <span>
+                    CVPR 2024 Workshop
+                    <br>
+                    June, Seattle, USA 
+                </span>
+            </div>
+
+            <div class="banner_logo_u">
+                <img loading="lazy" src="/ui2024/style/brand/shanghai_ai_lab_white_.png"/>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <br id="why_these_tracks"><br id="challenge"><br id="contact">
+
+
+
+    <div class="block_left">
+        <div style="flex-grow: 6;">
+
+            <a class="track_title" href="#why_these_tracks">
+                <h2>
+                    Why these tracks?
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <span>
+                The field of autonomous driving (AD) is rapidly evolving, and recent advancements from the machine learning community such as large language models (LLM) and world models bring great potential. We believe the future of AD lies in explainable, end-to-end models that understand the world and generalize to unvisited environments. In light of this, we propose six new challenges that push the boundary of existing perception, prediction and planning pipelines.
+            </span>
+            <br>
+
+
+
+            <a class="track_title" href="#contact">
+                <h2>
+                    Contact
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <span class="note">
+                <a href="mailto:workshop-e2e-ad@googlegroups.com" style="margin-right: 11px;">
+                    <img loading="lazy" src="/ui2024/style/icon/email.png"/>
+                </a>
+                <span>
+                    Contact us via <code>workshop-e2e-ad@googlegroups.com</code> with the prefix [CVPR 2024 FM4AS].
+                </span>
+            </span>
+            <br>
+            
+
+            
+        </div>
+        <div style="flex-grow: 1;"></div>
+        <div style="flex-grow: 6;">
+            
+            <a class="track_title" href="#challenge">
+                <h2>
+                    Challenge
+                    <img loading="lazy" class="link_img"/>
+                </h2>
+            </a>
+            <div class="timeline">
+                <div class="entries">
+                    <div class="entry">
+                        <h3 class="title">Feb. 01</h3>
+                        <span class="content">Challenge Announcement</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Feb. 10</h3>
+                        <span class="content">Challenge Setups Ready<br><code>[internal]</code></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Mar. 01</h3>
+                        <span class="content">Challenge Release</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Mar. 15</h3>
+                        <span class="content">Test Server Open</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 01</h3>
+                        <span class="content">Test Server Close / Registration Deadline</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 07</h3>
+                        <span class="content">Technical Report Submission Deadline</span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Jun. 12</h3>
+                        <span class="content">Winner Decision<br><code>[internal]</code></span>
+                    </div>
+                    <div class="entry">
+                        <h3 class="title">Workshop Day @ Seattle</h3>
+                        <span class="content">Winner Announcement & Presentation</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block">
+        <div class="navigator">
+            <a href="#end_to_end_driving_at_scale">End-to-End Driving at Scale</a>
+            <a href="#predictive_world_model">Predictive World Model</a>
+            <a href="#occupancy_and_flow">Occupancy and Flow</a>
+            <a href="#carla">CARLA Autonomous Driving Challenge</a>
+            <a href="#driving_with_language">Driving with Language</a>
+            <a href="#mapless_driving">Mapless Driving</a>
+            <br><br>
+        </div>
+    </div>
+
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="schedule">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#schedule">
+                <h1>
+                    Schedule
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <span>
+                Time zone:
+            </span>
+            <div class="schedule">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Time</td>
+                            <td>Speaker</td>
+                            <td>Theme</td>
+                            <td>Content</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>09:00, June 18</td>
+                            <td>Hongyang Li</td>
+                            <td>Opening Remarks: Autonomous Systems in the Era of Foundation Models </td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>09:10, June 18</td>
+                            <td>Jeannette Bohg</td>
+                            <td>Foundation Models for Solving Robotic Problems</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>09:40, June 18</td>
+                            <td>Ted Xiao</td>
+                            <td>The Art and Science of Taming Large-scale Data</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>10:10, June 18</td>
+                            <td>Winners</td>
+                            <td>Track</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>10:40, June 18</td>
+                            <td>Coffee Break</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>11:00, June 18</td>
+                            <td>Sergey Levine</td>
+                            <td>Reinforcement Learning in Robotics</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>11:30, June 18</td>
+                            <td>Winners</td>
+                            <td>Track</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>12:00, June 18</td>
+                            <td>Lunch Break</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>13:10, June 18</td>
+                            <td>Adrien Gaidon</td>
+                            <td>Principle-centric AI for Autonomous Systems</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>13:40, June 18</td>
+                            <td>Winners</td>
+                            <td>Track</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>14:10, June 18</td>
+                            <td>Alex Kendall</td>
+                            <td>Applying AI Breakthroughs to Autonomous Driving</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>14:40, June 18</td>
+                            <td>Coffee Break</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>15:00, June 18</td>
+                            <td>Phil Duan</td>
+                            <td>Building Foundation Models for Autonomous Driving</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>15:30, June 18</td>
+                            <td>Li Chen</td>
+                            <td>End-to-end Frameworks</td>
+                            <td>-</td>
+                        </tr>
+
+                        <tr>
+                            <td>16:00, June 18</td>
+                            <td>Organizers and Speakers</td>
+                            <td>Debate on Applications of Foundation Models</td>
+                            <td>-</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div> 
+    </div>
+
+    
+
+    <br><br><br>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="speaker">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#speaker">
+                <h1>
+                    Speaker
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/sergey_levine.jpg"/>
+                    </a>
+                    <h4>Sergey Levine</h4>
+                    <span><i>Associate Professor</i><br>UC Berkeley, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://web.stanford.edu/~bohg/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/jeannette_bohg.jpg"/>
+                    </a>
+                    <h4>Jeannette Bohg</h4>
+                    <span><i>Assistant Professor</i><br>Stanford, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://adriengaidon.com/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/adrien_gaidon.jpg"/>
+                    </a>
+                    <h4>Adrien Gaidon</h4>
+                    <span><i>Head of Machine Learning</i><br>Toyota Research Institute, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://alexgkendall.com" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/alex_kendall.jpg"/>
+                    </a>
+                    <h4>Alex Kendall</h4>
+                    <span><i>Co-Founder & CEO</i><br>Wayve, UK</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://tedxiao.me/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/ted_xiao.jpg"/>
+                    </a>
+                    <h4>Ted Xiao</h4>
+                    <span>Senior Research Scientist</i><br>Google DeepMind, USA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=ulZxvY0AAAAJ" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/li_chen.jpg"/>
+                    </a>
+                    <h4>Li Chen</h4>
+                    <span><i>Research Scientist</i><br>Shanghai AI Lab, China</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/phduan" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/phil_duan.jpg"/>
+                    </a>
+                    <h4>Phil Duan</h4>
+                    <span><i>Autopilot Vision Lead</i><br>Tesla, USA</span>
+                    <div></div>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="organizer">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#organizer">
+                <h1>
+                    Organizer
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://lihongyang.info" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/hongyang_li.jpg"/>
+                    </a>
+                    <h4>Hongyang Li</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://faikit.github.io/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/huijie_wang.jpg"/>
+                    </a>
+                    <h4>Huijie Wang</h4>
+                    <span>Shanghai AI Lab</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://kashyap7x.github.io" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/kashyap_chitta.jpg"/>
+                    </a>
+                    <h4>Kashyap Chitta</h4>
+                    <span>Univeristy of Tübingen</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://sites.google.com/it-caesar.de/homepage/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/holger_caesar.jpg"/>
+                    </a>
+                    <h4>Holger Caesar</h4>
+                    <span>TU Delft</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://germanros.net/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/german_ros.jpg"/>
+                    </a>
+                    <h4>German Ros</h4>
+                    <span>NVIDIA</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://mysite.ku.edu.tr/fguney/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/fatma_güney.jpg"/>
+                    </a>
+                    <h4>Fatma Güney</h4>
+                    <span>Koç University</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://people.ee.ethz.ch/~csakarid/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/christos_sakaridis.jpg"/>
+                    </a>
+                    <h4>Christos Sakaridis</h4>
+                    <span>ETH Zürich</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://anthonyhu.github.io/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/anthony_hu.jpg"/>
+                    </a>
+                    <h4>Anthony Hu</h4>
+                    <span>Wayve</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.cs.utexas.edu/~dchen/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/dian_chen.jpg"/>
+                    </a>
+                    <h4>Dian Chen</h4>
+                    <span>Waabi</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://hangqiu.github.io/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/hang_qiu.jpg"/>
+                    </a>
+                    <h4>Hang Qiu</h4>
+                    <span>UC Riverside</span>
+                    <div></div>
+                </div>
+                <div>
+                    <a>
+                        <img loading="lazy" src="/ui2024/style/person/jiajie_xu.jpg"/>
+                    </a>
+                    <h4>Jiajie Xu</h4>
+                    <span>CMU</span>
+                    <div></div>
+                </div>
+            </div>
+
+
+        </div> 
+    </div>
+
+
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <br><br><br>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="committee">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#committee">
+                <h1>
+                    Steering/Award Committee
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br><br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+
+            <div class="person_container">
+                <div>
+                    <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/yu_qiao.jpg"/>
+                    </a>
+                    <h4>Yu Qiao</h4>
+                    <span>Shanghai AI Lab<br><i style="color: gray;">Lead Scientist / Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://www.cvlibs.net" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/andreas_geiger.jpg"/>
+                    </a>
+                    <h4>Andreas Geiger</h4>
+                    <span>Univeristy of Tübingen<br><i style="color: gray;">Head of CS / Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://gr.xjtu.edu.cn/web/jrxue" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/jianru_xue.jpg"/>
+                    </a>
+                    <h4>Jianru Xue</h4>
+                    <span>Xi’an Jiaotong University<br><i style="color: gray;">Yangtze River Scholar / Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://baoquanchen.info/" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/baoquan_chen.jpg"/>
+                    </a>
+                    <h4>Baoquan Chen</h4>
+                    <span>Peking University<br><i style="color: gray;">Associate Dean / BOYA Distinguished Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://air.tsinghua.edu.cn/en/info/1046/1188.htm" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/yaqin_zhang.jpg"/>
+                    </a>
+                    <h4>Ya-Qin Zhang</h4>
+                    <span>Tsinghua University<br><i style="color: gray;">Academician of CAE / Chair Professor</i></span>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="https://alexgkendall.com" target="_blank">
+                        <img loading="lazy" src="/ui2024/style/person/alex_kendall.jpg"/>
+                    </a>
+                    <h4>Alex Kendall</h4>
+                    <span>Wayve<br><i style="color: gray;">Co-Founder & CEO</i></span>
+                    <div></div>
+                </div>
+            </div>
+
+
+        </div> 
+    </div>
+
+
+
+</body>

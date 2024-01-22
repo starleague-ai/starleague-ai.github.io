@@ -1,0 +1,100 @@
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: url(/ui2024/style/background/seattle.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgb(33, 33, 33, .5);
+    @media screen and (max-width: 1024px) {
+        background-position: 30%;
+    }
+}
+.banner_container div {
+    display: flex;
+    margin-top: 33px;
+}
+.banner_logo, .banner_logo_u {
+    flex-direction: row;
+}
+.banner_logo img {
+    height: 66px;
+    margin-right: 33px;
+}
+.banner_logo_u img {
+    height: 33px;
+}
+
+
+
+.banner_title {
+    flex-direction: row;
+}
+.banner_title span {
+    font-size: 99px;
+    font-weight: bold;
+    color: rgb(233, 233, 233);
+}
+
+
+
+.banner_title_sub span, .banner_title_sub span a {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(233, 233, 233);
+}
+
+
+
+.banner_content span {
+    font-size: 23px;
+    color: rgb(233, 233, 233);
+}
+
+
+
+.rules {
+    margin: 0;
+    padding-inline-start: 17px;
+}
+@media screen and (max-width: 1024px) {
+    .rules {
+        padding-inline-start: 27px;
+        font-size: 1rem;
+    }
+    html {
+        font-size: 16px !important; 
+    }
+    span{
+        font-size: 1.25rem;
+    }
+}
+.faq ul {
+    margin-top: 3;
+    margin-bottom: 11px;
+}
+
+
+
+.note {
+    display: flex; 
+    align-items: center;
+}
+.note a img {
+    height: 33px;
+    @media screen and (max-width: 1024px) {
+        height: 44px;
+        margin-right: 11px;
+    }
+}
+
+
+
+
+.track_title {
+    margin: 0;
+}
+.track_title h1 {
+    font-size: 333%;
+    margin: 0;
+}
