@@ -32,7 +32,69 @@
         $("body").append(result)
     })
 </script>
+<script>
+    function convertTimezone(offset) {
+      // 获取所选时区的偏移量
+      var selectedOffset = parseInt(offset);
 
+      // 获取所有具有特定类和属性的时间元素
+      var eventTimes = document.querySelectorAll(".event-time");
+
+      // 遍历每个时间元素，将其时间根据所选时区进行调整
+      eventTimes.forEach(function (eventTime) {
+        // 获取原始时间
+        var originalTime = new Date(
+          eventTime.getAttribute("data-original-time")
+        );
+
+        // 根据所选偏移量调整时间
+        var adjustedTime = new Date(
+          originalTime.getTime() + selectedOffset * 60 * 60 * 1000
+        );
+
+        // 格式化调整后的时间为 "09:00, June 18" 的形式
+        var hours = adjustedTime.getHours().toString().padStart(2, "0");
+        var minutes = adjustedTime.getMinutes().toString().padStart(2, "0");
+        var month = adjustedTime.toLocaleString("en-US", { month: "long" });
+        var day = adjustedTime.getDate();
+
+        var formattedTime = hours + ":" + minutes + ", " + month + " " + day;
+
+        // 更新时间元素的内容为调整后的时间
+        eventTime.textContent = formattedTime;
+      });
+    }
+
+    window.onload = function() {
+            // 获取用户所在的时区
+            var userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            console.log('userTimeZone=====================',userTimeZone )
+            // 根据用户所在的时区，找到对应的下拉选项并将其选中
+            var timezoneSelect = document.getElementById('timezoneSelect');
+            var userOptionFound = false;
+            for (var i = 0; i < timezoneSelect.options.length; i++) {
+                if (timezoneSelect.options[i].value === userTimeZone) {
+                    timezoneSelect.selectedIndex = i;
+                    userOptionFound = true;
+                    break;
+                }
+            }
+
+            // 如果用户所在的时区在下拉选项中不存在，生成对应的 UTC 时区选项并选中
+            if (!userOptionFound) {
+                var utcOffset = new Date().getTimezoneOffset() / -60;
+                var utcOption = document.createElement('option');
+                utcOption.value = utcOffset;
+                utcOption.textContent = userTimeZone+' '+'('+'UTC+'+ utcOffset +')';
+                console.log('utcOption=====================',utcOption.value,utcOption.textContent)
+                timezoneSelect.insertBefore(utcOption, timezoneSelect.firstChild);  // 插入到首位
+                timezoneSelect.value = utcOffset;
+            }
+
+            // 调用 convertTimezone 方法，根据用户所在的时区进行时间转换
+            convertTimezone(timezoneSelect.value);
+        };
+  </script>
 
 
 <body>
@@ -156,8 +218,36 @@
     </div>
     <br>
     <div class="block_left" style="margin-top: 0; padding-top: 0">
-        <div style="flex-grow: 1;">
 
+        <div style="flex-grow: 1;">
+            <div style="width: 260px;margin: 24px 0px;">
+                <select id="timezoneSelect" onchange="convertTimezone(this.value)">
+                  <option value="-11">Niue/Pago_Pago (UTC-11)</option>
+                  <option value="-10">Honolulu/Adak (UTC-10)</option>
+                  <option value="-9">Alaska/Gambier Islands (UTC-9)</option>
+                  <option value="-8">Anchorage/Nome (UTC-8)</option>
+                  <option value="-7">Vancouver/Los_Angeles (UTC-7)</option>
+                  <option value="-6">Belize (UTC-6)</option>
+                  <option value="-5">Chicago (UTC-5)</option>
+                  <option value="-4">New_York/Detroit (UTC-4)</option>
+                  <option value="-3">Araguaina/Maceio/Thule (UTC-3)</option>
+                  <option value="-2">Noronha/South_Georgia (UTC-2)</option>
+                  <option value="-1">Cape_Verde/Azores (UTC-1)</option>
+                  <option value="0">Ireland/Portugal (UTC+0)</option>
+                  <option value="1">London/Canary (UTC+1)</option>
+                  <option value="2">Paris/Berlin/Cairo/Kigali (UTC+2)</option>
+                  <option value="3">Moscow/Baghdad (UTC+3)</option>
+                  <option value="4">Dubai/Mahe (UTC+4)</option>
+                  <option value="5">Qyzylorda/Kerguelen (UTC+5)</option>
+                  <option value="6">Almaty/Kolkata (UTC+6)</option>
+                  <option value="7">Bangkok/Christmas (UTC+7)</option>
+                  <option value="8">Beijing/Hong_Kong (UTC+8)</option>
+                  <option value="9">Tokyo/Seoul (UTC+9)</option>
+                  <option value="10">Sydney/Brisbane (UTC+10)</option>
+                  <option value="11">Lord_Howe/Kosrae (UTC+11)</option>
+                  <option value="12">Wallis/Fiji (UTC+12)</option>
+                </select>
+            </div>
             <span>
                 Time zone:
             </span>
@@ -174,105 +264,105 @@
                     <tbody>
 
                         <tr>
-                            <td>09:00, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T09:00:00">09:00, June 18</td>
                             <td>Hongyang Li</td>
                             <td>Opening Remarks: Autonomous Systems in the Era of Foundation Models </td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>09:10, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T09:10:00">09:10, June 18</td>
                             <td>Jeannette Bohg</td>
                             <td>Foundation Models for Solving Robotic Problems</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>09:40, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T09:40:00">09:40, June 18</td>
                             <td>Ted Xiao</td>
                             <td>The Art and Science of Taming Large-scale Data</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>10:10, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T10:10:00">10:10, June 18</td>
                             <td>Winners</td>
                             <td>Track</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>10:40, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T10:40:00">10:40, June 18</td>
                             <td>Coffee Break</td>
                             <td>-</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>11:00, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T11:00:00">11:00, June 18</td>
                             <td>Sergey Levine</td>
                             <td>Reinforcement Learning in Robotics</td>
                             <td>-</td>
                         </tr>
 
-                        <tr>
-                            <td>11:30, June 18</td>
+                        <tr >
+                            <td class="event-time" data-original-time="2024-06-18T11:30:00">11:30, June 18</td>
                             <td>Winners</td>
                             <td>Track</td>
                             <td>-</td>
                         </tr>
 
-                        <tr>
-                            <td>12:00, June 18</td>
+                        <tr >
+                            <td class="event-time" data-original-time="2024-06-18T12:00:00">12:00, June 18</td>
                             <td>Lunch Break</td>
                             <td>-</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>13:10, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T13:10:00">13:10, June 18</td>
                             <td>Adrien Gaidon</td>
                             <td>Principle-centric AI for Autonomous Systems</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>13:40, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T13:40:00">13:40, June 18</td>
                             <td>Winners</td>
                             <td>Track</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>14:10, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T14:10:00">14:10, June 18</td>
                             <td>Alex Kendall</td>
                             <td>Applying AI Breakthroughs to Autonomous Driving</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>14:40, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T14:40:00">14:40, June 18</td>
                             <td>Coffee Break</td>
                             <td>-</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>15:00, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T15:00:00">15:00, June 18</td>
                             <td>Phil Duan</td>
                             <td>Building Foundation Models for Autonomous Driving</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>15:30, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T15:30:00">15:30, June 18</td>
                             <td>Li Chen</td>
                             <td>End-to-end Frameworks</td>
                             <td>-</td>
                         </tr>
 
                         <tr>
-                            <td>16:00, June 18</td>
+                            <td class="event-time" data-original-time="2024-06-18T16:00:00">16:00, June 18</td>
                             <td>Organizers and Speakers</td>
                             <td>Debate on Applications of Foundation Models</td>
                             <td>-</td>
