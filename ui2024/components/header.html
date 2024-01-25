@@ -1,10 +1,10 @@
-<link   href="/ui2024/style/css/header.css" rel="stylesheet" type="text/css" media="all" as="style"/>
+<link   href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all" as="style"/>
 <div class="header" id="header" style="display: none;">
     <div class="block_header">
 
         <div class="header_left">
             <a href="/">
-                <img id="header_logo" src="/ui2024/style/icon/star_league_white.png"/>
+                <img id="header_logo" src="/assets/icon/star_league_white.png"/>
             </a>
         </div>
 
@@ -26,7 +26,7 @@
         </div>
 
         <div class="nav_button" onclick="show()">
-            <img id="nav_button" src="/ui2024/style/icon/nav_white.png" />
+            <img id="nav_button" src="/assets/icon/nav_white.png" />
         </div>
 
     </div>
@@ -35,13 +35,13 @@
 <script defer>
     const as_transparent = () => {
         header.classList.remove("nav_scoll");
-        header_logo.src = "/ui2024/style/icon/star_league_white.png";
-        nav_button.src = "/ui2024/style/icon/nav_white.png";
+        header_logo.src = "/assets/icon/star_league_white.png";
+        nav_button.src = "/assets/icon/nav_white.png";
     };
     const as_white = () => {
         header.classList.add("nav_scoll");
-        header_logo.src = "/ui2024/style/icon/star_league.png";
-        nav_button.src = "/ui2024/style/icon/nav.png";
+        header_logo.src = "/assets/icon/star_league.png";
+        nav_button.src = "/assets/icon/nav.png";
     };
 </script>
 
