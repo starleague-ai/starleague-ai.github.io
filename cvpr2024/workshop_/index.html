@@ -7,7 +7,70 @@
     <link href="/ui2024/style/css/all.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
 
-    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/ui2024/js/jquery-3.7.1.min.js"  crossorigin="anonymous"></script>
+
+    <!-- <style>
+        /* 表格样式 */
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+  
+        th,
+        td {
+          border: 1px solid #dddddd;
+          padding: 8px;
+          text-align: left;
+        }
+  
+        th {
+          background-color: #f0f0f0;
+          position: relative;
+        }
+        tr {
+          background-color: #f9f9f9;
+        }
+  
+        /* 图片样式 */
+        img {
+          width: 30px;
+          height: 20px;
+        }
+  
+        /* 分页样式 */
+        button {
+          padding: 10px 20px;
+          margin: 0 10px;
+          cursor: pointer;
+          background-color: #4caf50;
+          color: white;
+          border: none;
+          border-radius: 3px;
+        }
+  
+        select {
+          padding: 10px;
+        }
+  
+        /* 悬停效果 */
+        tr:hover {
+          background-color: #f5f5f5;
+        }
+        .sort-icon {
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+        }
+        .sort-icon.up {
+          color: #0000ff; /* 蓝色表示升序 */
+        }
+        .sort-icon.down {
+          color: #15cde5; /* 红色表示降序 */
+        }
+      </style> -->
 </head>
 
 
@@ -32,6 +95,7 @@
         $("body").append(result)
     })
 </script>
+
 <script>
     function convertTimezone(offset) {
       // 获取所选时区的偏移量
@@ -64,10 +128,11 @@
         eventTime.textContent = formattedTime;
       });
     }
-
-    window.onload = function() {
-            // 获取用户所在的时区
-            var userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    
+    window.addEventListener('load', function() {
+         // 在页面加载完成后执行的代码
+          // 获取用户所在的时区
+          var userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
             console.log('userTimeZone=====================',userTimeZone )
             // 根据用户所在的时区，找到对应的下拉选项并将其选中
             var timezoneSelect = document.getElementById('timezoneSelect');
@@ -93,8 +158,10 @@
 
             // 调用 convertTimezone 方法，根据用户所在的时区进行时间转换
             convertTimezone(timezoneSelect.value);
-        };
-  </script>
+    });
+</script>
+
+
 
 
 <body>
@@ -251,14 +318,14 @@
             <span>
                 Time zone:
             </span>
-            <div class="schedule">
+            <div class="rankTable">
                 <table>
                     <thead>
                         <tr>
-                            <td>Time</td>
-                            <td>Speaker</td>
-                            <td>Theme</td>
-                            <td>Content</td>
+                            <th>Time</th>
+                            <th>Speaker</th>
+                            <th>Theme</th>
+                            <th>Content</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -372,7 +439,30 @@
                 </table>
             </div>
 
-
+            <span>
+                Rank:
+            </span>
+            <table id="myTable" class="rankTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0, 'rank')">rank <span class="sort-icon" id="sortIcon0"></span></th>
+                        <th onclick="sortTable(1, 'metrics')">primary metric <span class="sort-icon" id="sortIcon1"></span></th>
+                        <th onclick="sortTable(2, 'country')">Country / Region <span class="sort-icon" id="sortIcon2"></span>
+                        </th>
+                        <th onclick="sortTable(3, 'key')">key1 <span class="sort-icon" id="sortIcon3"></span></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+            <div style="display: flex;flex-direction: row;justify-content: flex-start;" class="rankTable">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="nextPage()">Next</button>
+                <select id="pageSize" onchange="changePageSize()">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
         </div> 
     </div>
 
@@ -444,7 +534,7 @@
                         <img loading="lazy" src="/ui2024/style/person/ted_xiao.jpg"/>
                     </a>
                     <h4>Ted Xiao</h4>
-                    <span>Senior Research Scientist</i><br>Google DeepMind, USA</span>
+                    <span><i>Senior Research Scientist</i><br>Google DeepMind, USA</span>
                     <div></div>
                 </div>
                 <div>
@@ -541,7 +631,7 @@
                 </div>
                 <div>
                     <a href="https://mysite.ku.edu.tr/fguney/" target="_blank">
-                        <img loading="lazy" src="/ui2024/style/person/fatma_güney.jpg"/>
+                        <img loading="lazy" src="/ui2024/style/person/fatma.jpg"/>
                     </a>
                     <h4>Fatma Güney</h4>
                     <span>Koç University</span>
@@ -685,3 +775,205 @@
 
 
 </body>
+
+<script defer>
+    const data = [
+      {
+        metrics: 0.94,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.93,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.89, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.66,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.34,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+      {
+        metrics: 0.094,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.093,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.089, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.066,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.034,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+      {
+        metrics: 0.0094,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.0093,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.0089, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.0066,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.0034,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+      {
+        metrics: 0.00094,
+        country: "China",
+        flag: "China",
+        key: "key1测试1111111",
+      },
+      {
+        metrics: 0.00093,
+        country: "United States",
+        flag: "United States",
+        key: "key1测试2",
+      },
+      { metrics: 0.00089, country: "Japan", flag: "Japan", key: "key1测试3" },
+      {
+        metrics: 0.00066,
+        country: "Türkiye",
+        flag: "Türkiye",
+        key: "key1测试4",
+      },
+      {
+        metrics: 0.00034,
+        country: "Britain",
+        flag: "Britain",
+        key: "key1测试5",
+      },
+    ];
+    // const data = [
+    //   {rank: 1, metrics: 0.94, country: "China", flag: "China", key: "key1测试1111111" },
+    //   {rank: 2, metrics: 0.93, country: "United States", flag: "United States", key: "key1测试2" },
+    //   {rank: 3, metrics: 0.89, country: "Japan", flag: "Japan", key: "key1测试3" },
+    //   {rank: 4, metrics: 0.66, country: "Türkiye", flag: "Türkiye", key: "key1测试4" },
+    //   {rank: 5, metrics: 0.34, country: "Britain", flag: "Britain", key: "key1测试5" },
+    // ];
+
+    // 根据metrics排序
+    data.sort((a, b) => b.metrics - a.metrics);
+
+    // 为每行数据添加rank值
+    data.forEach((item, index) => {
+      item.rank = index + 1;
+    });
+    console.log('data=========================',data)
+    let currentPage = 1;
+    let pageSize = 10;
+    let sortColumn = null;
+    let sortDirection = "asc";
+
+    function renderTable() {
+      const tableBody = document.getElementById("tableBody");
+      tableBody.innerHTML = " ";
+      const start = (currentPage - 1) * pageSize;
+      const end = currentPage * pageSize;
+      const paginatedData = data.slice(start, end);
+      paginatedData.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${item.rank}</td>
+        <td>${item.metrics}</td>
+        <td>
+            <img src="/ui2024/style/icon/flag/${item.flag}.png" alt="${item.country}"> ${item.country}</td>
+        <td>${item.key}</td>
+      `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function sortTable(columnIndex, columnKey) {
+      if (sortColumn === columnKey) {
+        sortDirection = sortDirection === "asc" ? "desc" : "asc";
+      } else {
+        sortColumn = columnKey;
+        sortDirection = "asc";
+      }
+      updateSortIcons(columnIndex);
+      data.sort((a, b) => {
+        if (sortDirection === "asc") {
+          return a[columnKey] - b[columnKey];
+        } else {
+          return b[columnKey] - a[columnKey];
+        }
+      });
+      renderTable();
+    }
+
+    function updateSortIcons(columnIndex) {
+      const sortIcons = document.querySelectorAll(".sort-icon");
+      sortIcons.forEach((icon, index) => {
+        if (index === columnIndex) {
+          if (sortDirection === "asc") {
+            icon.className = "sort-icon up";
+            icon.innerHTML = "▲";
+          } else {
+            icon.className = "sort-icon down";
+            icon.innerHTML = "▼";
+          }
+        } else {
+          icon.className = "sort-icon";
+          icon.innerHTML = "";
+        }
+      });
+    }
+
+    function previousPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+      }
+    }
+
+    function nextPage() {
+      const totalPages = Math.ceil(data.length / pageSize);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+      }
+    }
+
+    function changePageSize() {
+      pageSize = parseInt(document.getElementById("pageSize").value, 10);
+      renderTable();
+    }
+
+    renderTable();
+  </script>

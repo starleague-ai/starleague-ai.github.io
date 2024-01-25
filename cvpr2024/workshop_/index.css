@@ -102,3 +102,79 @@
 .navigator a {
     font-size: large;
 }
+
+.rankTable{
+    margin: 24px 0px;
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+
+/* 表格样式 */
+.rankTable table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.rankTable th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.rankTable th {
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.rankTable tr {
+    background-color: #f9f9f9;
+}
+
+/* 图片样式 */
+.rankTable img {
+    width: 30px;
+    height: 20px;
+}
+
+/* 分页样式 */
+.rankTable  button {
+    padding: 10px 10px;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.rankTable select {
+    padding: 10px;
+    height: 36px;
+    margin: 0 15px 0 0;
+}
+
+/* 悬停效果 */
+.rankTable tr:hover {
+    background-color: #f5f5f5;
+}
+
+.rankTable .sort-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.rankTable .sort-icon.up {
+    color: #0000ff;
+    /* 蓝色表示升序 */
+}
+
+.rankTable .sort-icon.down {
+    color: #15cde5;
+    /* 红色表示降序 */
+}
+

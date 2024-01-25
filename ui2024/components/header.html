@@ -105,8 +105,12 @@
 </script>
 
 <script async>
-    window.onload = function() {
+    // window.onload = function() {
+    //     // 当页面加载完成后，显示 <div class="header" id="header"> 的内容
+    //     document.getElementById('header').style.display = 'block';
+    // };
+    window.addEventListener('load', function() {
         // 当页面加载完成后，显示 <div class="header" id="header"> 的内容
-        document.getElementById('header').style.display = 'block';
-    };
+            document.getElementById('header').style.display = 'block';
+    });
 </script>
