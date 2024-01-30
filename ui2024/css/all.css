@@ -97,17 +97,32 @@ span a, p a, li a{
 }
 
 
-
+.navigator-div{
+    position: sticky;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-basis: 0;
+    padding: 0 max(55px, 5%);
+    background-color: #fff;
+    @media screen and (max-width: 1024px) {
+        top: 90px;
+    }
+}
 .navigator {
     border-bottom: 3px solid rgb(233, 233, 233);
     flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .navigator a, .navigator br {
     margin-right: max(22px, 2%);
     font-size: x-small;
-    @media screen and (max-width: 1024px) {
+    /* @media screen and (max-width: 1024px) {
         display: none;
-    }
+    } */
 }
 
 
