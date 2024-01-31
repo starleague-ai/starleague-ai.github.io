@@ -105,10 +105,16 @@ span a, p a, li a{
     z-index: 1000;
     flex-basis: 0;
     padding: 0 max(55px, 5%);
-    background-color: #fff;
+    /* background-color: #fff; */
+    /* 未出现粘粘效果时的颜色 */
+    background-color: lightgray;
     @media screen and (max-width: 1024px) {
         top: 90px;
     }
+}
+.sticky {
+    /* 出现粘粘效果时的颜色 */
+    background-color: lightblue; 
 }
 .navigator {
     border-bottom: 3px solid rgb(233, 233, 233);

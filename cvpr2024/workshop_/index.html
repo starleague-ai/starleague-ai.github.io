@@ -977,3 +977,20 @@
 
     renderTable();
   </script>
+
+
+<script defer>
+    // 获取 .navigator-div 元素
+    const navigatorDiv = document.querySelector('.navigator-div');
+
+    // 监听 scroll 事件
+    window.addEventListener('scroll', () => {
+      const rect = navigatorDiv.getBoundingClientRect();
+      if (rect.top <= 110 && rect.bottom <= window.innerHeight) {
+        navigatorDiv.classList.add('sticky');
+      } else {
+        navigatorDiv.classList.remove('sticky');
+      }
+      console.log('navigatorDiv.classList======',navigatorDiv.classList )
+    });
+  </script>
