@@ -919,22 +919,48 @@
       });
     }
 
+    // function sortTable(columnIndex, columnKey) {
+    //   if (sortColumn === columnKey) {
+    //     sortDirection = sortDirection === "asc" ? "desc" : "asc";
+    //   } else {
+    //     sortColumn = columnKey;
+    //     sortDirection = "asc";
+    //   }
+    //   updateSortIcons(columnIndex);
+    //   data.sort((a, b) => {
+    //     if (sortDirection === "asc") {
+    //       return a[columnKey] - b[columnKey];
+    //     } else {
+    //       return b[columnKey] - a[columnKey];
+    //     }
+    //   });
+    //   renderTable();
+    // }
+
     function sortTable(columnIndex, columnKey) {
-      if (sortColumn === columnKey) {
+        if (sortColumn === columnKey) {
         sortDirection = sortDirection === "asc" ? "desc" : "asc";
-      } else {
+        } else {
         sortColumn = columnKey;
         sortDirection = "asc";
-      }
-      updateSortIcons(columnIndex);
-      data.sort((a, b) => {
-        if (sortDirection === "asc") {
-          return a[columnKey] - b[columnKey];
-        } else {
-          return b[columnKey] - a[columnKey];
         }
-      });
-      renderTable();
+        updateSortIcons(columnIndex);
+        data.sort((a, b) => {
+        if (sortDirection === "asc") {
+            if (typeof a[columnKey] === "string" && typeof b[columnKey] === "string") {
+            return a[columnKey].localeCompare(b[columnKey]);
+            } else {
+            return a[columnKey] - b[columnKey];
+            }
+        } else {
+            if (typeof a[columnKey] === "string" && typeof b[columnKey] === "string") {
+            return b[columnKey].localeCompare(a[columnKey]);
+            } else {
+            return b[columnKey] - a[columnKey];
+            }
+        }
+        });
+        renderTable();
     }
 
     function updateSortIcons(columnIndex) {
