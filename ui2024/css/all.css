@@ -66,10 +66,11 @@ span a, p a, li a{
     padding: 0 max(55px, 5%);
 }
 .banner_container {
-    height: 88%;
+    height: 0%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: absolute;
 }
 .block_left {
     flex-direction: row;
