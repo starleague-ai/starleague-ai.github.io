@@ -1,0 +1,211 @@
+<head>
+    <title>Star League</title>
+    <meta name="keywords" content="Star League">
+
+    <link rel="icon" type="image/png" href="/assets/icon/star_league_square.png">
+
+    <link href="/ui2024/css/all_.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/home_.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="/ui2024/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-07T97F5TB5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-07T97F5TB5');
+</script>
+
+
+
+<script>
+    // $.get("/ui2024/components/header.html",function(result){
+    //     $("body").prepend(result)
+    // })
+    $.get("/ui2024/components/footer.html",function(result){
+        $("body").append(result)
+    })
+</script>
+
+
+
+ <!-- <script>
+    function shuffle(array) {
+        let currentIndex = array.length,  randomIndex;
+        // While there remain elements to shuffle.
+        while (currentIndex > 0) {
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
+
+    $(function() {
+        var boxes = $(".brand_logos");
+        var indices = shuffle(Array.from({length: boxes.length}, (x, i) => i));
+        for (var i = boxes.length; i > 0; i--) {
+            var randomIndex = indices[i-1];
+            var randomBox = boxes[randomIndex];
+            var currentBox = boxes[i - 1];
+            $(currentBox).before($(randomBox));
+        }
+    });
+</script> -->
+
+
+
+<body>
+
+
+    
+    <div class="banner">
+        <div class="top_video">
+            <video autoplay loop muted>
+                <source src="/assets/background/dynamic_bg.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="banner_container">
+            
+            <div class="banner_title_cn">
+                <img loading="lazy" src="/assets/icon/star_league_white.png"/>
+            </div>
+           
+            <div class="banner_title_en">
+                <span>Our mission is to promote the development of autonomous driving (AD) and embodied intelligence (EI) in academia and various industries.</span>
+            </div>
+            
+            <div class="banner_title_en">
+                <span>Contact: <a href="mailto:contact@starleague.ai">contact@starleague.ai</a></span>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="vision_2024">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#vision_2024">
+                <br><br><br>
+                <h1>
+                    Vision 2024
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <div class="vision_container">
+                <a href="https://arxiv.org/abs/2312.03408" target="_blank"><span>Industry White Papers</span></a>
+                <a target="_blank"><span>IEEE Standards</span></a>
+                <a href="https://opendrivelab.com/challenge2024" target="_blank"><span>International Competitions</span></a>
+                <a href="https://opendrivelab.com/cvpr2024" target="_blank"><span>Workshop / Tutorial</span></a>
+            </div>
+        </div> 
+    </div>
+    <br><br><br>
+
+
+    
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="membership">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#membership">
+                <br><br><br>
+                <h1>
+                    Membership
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <div class="icon_container">
+                <div>
+                    <img src="/assets/icon/institute.png"/>
+                    <span>International Institute</span>
+                </div>
+                <div>
+                    <img src="/assets/icon/academia.png"/>
+                    <span>Academia</span>
+                </div>
+                <div>
+                    <img src="/assets/icon/industry.png"/>
+                    <span>Industry</span>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <br>
+
+<!-- 
+
+    <div class="block" style="margin: 0;">
+        <div class="navigator"></div>
+    </div>
+
+
+
+    <div class="block_left" style="margin-bottom: 0; padding-bottom: 0;" id="membership">
+        <div style="flex-grow: 1;">
+            <a class="track_title" href="#membership">
+                <br><br><br>
+                <h1>
+                    Membership
+                    <img loading="lazy" class="link_img"/>
+                </h1>
+            </a>
+        </div> 
+    </div>
+    <br>
+    <div class="block_left" style="margin-top: 0; padding-top: 0">
+        <div style="flex-grow: 1;">
+            <div class="brand_container">
+                <div class="brand_logos">
+                    <a href="https://www.shlab.org.cn/" target="_blank"><img loading="lazy" src="/assets/brand/shanghai_ai_lab_.png"/></a>
+                    <div><div style="background-color: gray;">FOUNDER</div></div>
+                </div>
+                <div class="brand_logos"><a href="https://www.sjtu.edu.cn/" target="_blank"><img loading="lazy" src="/assets/brand/SJTU.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.fudan.edu.cn/" target="_blank"><img loading="lazy" src="/assets/brand/fudan.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.tongji.edu.cn/" target="_blank"><img loading="lazy" src="/assets/brand/tongji.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.changan.com.cn/" target="_blank"><img loading="lazy" src="/assets/brand/changan_auto.png"/></a></div>
+                <div class="brand_logos"><a href="https://home.baidu.com/" target="_blank"><img loading="lazy" src="/assets/brand/baidu.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.huawei.com/" target="_blank"><img loading="lazy" src="/assets/brand/huawei.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.megvii.com/" target="_blank"><img loading="lazy" src="/assets/brand/megvii.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.bydglobal.com/" target="_blank"><img loading="lazy" src="/assets/brand/BYD.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.meituan.com/" target="_blank"><img loading="lazy" src="/assets/brand/meituan.png"/></a></div>
+                <div class="brand_logos"><a href="https://github.com/peng-zhihui" target="_blank"><img loading="lazy" src="/assets/brand/zhihuijun.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.tsinghua.edu.cn/" target="_blank"><img loading="lazy" src="/assets/brand/tsinghua.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.pku.edu.cn/" target="_blank"><img loading="lazy" src="/assets/brand/peking.png"/></a></div>
+                <div class="brand_logos"><a href="https://buaa.edu.cn/" target="_blank"><img loading="lazy" src="/assets/brand/buaa.png"/></a></div>
+                <div class="brand_logos"><a href="https://www.hp.com/" target="_blank"><img loading="lazy" src="/assets/brand/hp.svg"/></a></div>
+                <div class="brand_logos"><a href="https://www.jiqizhixin.com/" target="_blank"><img loading="lazy" src="/assets/brand/jiqizhixin.png"/></a></div><div class="brand_logos"><a href="https://idgcapital.com/" target="_blank"><img loading="lazy" src="/assets/brand/idg.svg"/></a></div>
+                <div></div>
+            </div>
+        </div> 
+    </div>
+    <br><br><br> -->
+
+    
+
+</body>
