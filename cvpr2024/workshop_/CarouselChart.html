@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .html {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+        }
+
+        .wrap {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .list {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding-left: 0px;
+        }
+
+        .item {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: all 1s;
+            background-size: cover;
+            transition: opacity 1.5s ease;
+            /* 添加过渡效果 */
+        }
+
+        .item.active {
+            opacity: 1;
+            /* 显示当前活动的图片 */
+        }
+
+        @keyframes showcontent {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+                filter: blur(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+                filter: blur(0);
+            }
+        }
+
+        .item .content {
+            width: 300px;
+            position: absolute;
+            left: min(100px, 10vw);
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: system-ui;
+            color: #eee;
+            display: block;
+        }
+
+        .theme {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0;
+            opacity: 0;
+            width: 80vw;
+            overflow-wrap: break-word;
+            /* 当单词太长时强制换行 */
+            word-wrap: break-word;
+            /* 兼容性较好的属性，用于处理IE浏览器 */
+            white-space: pre-wrap;
+            /* 保留空格和换行符，自动换行 */
+        }
+
+        .theme.active {
+            animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+        }
+
+
+        .subtopic {
+            margin: 20px 0;
+            padding: 10px;
+            opacity: 0;
+            overflow-wrap: break-word;
+            /* 当单词太长时强制换行 */
+            word-wrap: break-word;
+            /* 兼容性较好的属性，用于处理IE浏览器 */
+            white-space: pre-wrap;
+            /* 保留空格和换行符，自动换行 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .subtopic.active {
+            animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+        }
+
+        .item button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+        }
+
+        .item:nth-child(1) {
+            background-image: url("img/car-01.jpeg");
+        }
+
+        .item:nth-child(2) {
+            background-image: url("img/car-02.jpg");
+        }
+
+        .item:nth-child(3) {
+            background-image: url("img/car-03.jpeg");
+        }
+
+        .item.active {
+            z-index: 10;
+            opacity: 1;
+            transition: 0.8s;
+        }
+
+        /* .btn {
+            width: 60px;
+            height: 100px;
+            z-index: 100;
+            top: 50vh;
+            transform: translate(-30px,-50px);
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            user-select: none;
+        }
+ 
+        #leftBtn {
+            left: 0px;
+        }
+ 
+        #rightBtn {
+            right: 0px;
+        } */
+
+        .button {
+            top: 0vh;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .button-left,
+        .button-right {
+            font-size: 50px;
+            /* background-color: rgba(102, 123, 161, 0.288); */
+            padding: 0 20px;
+            cursor: pointer;
+            color: #fff;
+            z-index: 200;
+        }
+
+
+        .pointList {
+            list-style: none;
+            padding-left: 0px;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            z-index: 200;
+        }
+
+        .point {
+            width: 10px;
+            height: 10px;
+            background-color: antiquewhite;
+            border-radius: 100%;
+            float: left;
+            margin-right: 8px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: slategray;
+            cursor: pointer;
+        }
+
+        .point.active {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="list">
+            <li class="item active">
+                <div class="content">
+                    <div class="theme active">TEST11111111111111</div>
+                    <div class="subtopic active">
+                        <p>TEST2222222222</p>
+                        <button>TEST3</button>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="content">
+                    <div class="theme active">TEST444444444</div>
+                    <div class="subtopic active">
+                        <p>TEST555555555</p>
+                        <button>TEST6</button>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="content">
+                    <div class="theme active">TEST77777777</div>
+                    <div class="subtopic active">
+                        <p>TEST88888888888</p>
+                        <button>TEST9999</button>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <ul class="pointList">
+            <li class="point active" data-index=0></li>
+            <li class="point" data-index=1></li>
+            <li class="point" data-index=2></li>
+        </ul>
+        <div class="button">
+            <div class="button-left">&lt;</div>
+            <div class="button-right">&gt;</div>
+        </div>
+
+    </div>
+    <script>
+        var items = document.querySelectorAll(".item");//图片
+        var themes = document.querySelectorAll(".theme");//theme
+        var subtopics = document.querySelectorAll(".subtopic");//subtopic
+        var points = document.querySelectorAll(".point")//点
+        // var right = document.getElementById("rightBtn");
+        let left = document.querySelector(".button-left")
+        let right = document.querySelector(".button-right")
+        var all = document.querySelector(".wrap")
+        var index = 0;
+        var time = 0;//定时器跳转参数初始化
+
+
+        //清除active方法
+        var clearActive = function () {
+            for (i = 0; i < items.length; i++) {
+                items[i].className = 'item';
+            }
+            for (i = 0; i < items.length; i++) {
+                themes[i].className = 'theme';
+            }
+            for (i = 0; i < items.length; i++) {
+                subtopics[i].className = 'subtopic';
+            }
+            for (j = 0; j < points.length; j++) {
+                points[j].className = 'point';
+            }
+        }
+
+        //改变active方法
+        var goIndex = function () {
+            clearActive();
+            items[index].className = 'item active';
+            themes[index].className = 'theme active'
+            subtopics[index].className = 'subtopic active'
+            points[index].className = 'point active'
+
+            // 更新当前显示的item索引
+            currentIndex = index;
+        }
+        //左按钮事件
+        var goLeft = function () {
+            if (index == 0) {
+                index = 2;
+            } else {
+                index--;
+            }
+            goIndex();
+        }
+
+        //右按钮事件
+        var goRight = function () {
+            if (index < 2) {
+                index++;
+            } else {
+                index = 0;
+            }
+            goIndex();
+        }
+
+
+        //绑定点击事件监听
+        left.addEventListener('click', function () {
+            goLeft();
+            time = 0;//计时器跳转清零
+        })
+
+        right.addEventListener('click', function () {
+            goRight();
+            time = 0;//计时器跳转清零
+        })
+
+        for (i = 0; i < points.length; i++) {
+            points[i].addEventListener('click', function () {
+                var pointIndex = this.getAttribute('data-index')
+                index = pointIndex;
+                goIndex();
+                time = 0;//计时器跳转清零
+            })
+        }
+        //计时器
+        var timer;
+        function play() {
+            timer = setInterval(() => {
+                time++;
+                if (time == 60) {
+                    goRight();
+                    time = 0;
+                }
+            }, 100)
+        }
+        play();
+        //移入清除计时器
+        all.onmousemove = function () {
+            clearInterval(timer)
+        }
+        //移出启动计时器
+        all.onmouseleave = function () {
+            play();
+        }
+    </script>
+</body>
+
+</html>
