@@ -70,6 +70,21 @@ span a, p a, li a{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: absolute;
+}
+.top_video {
+    height: 100%;
+    min-width: 100%; 
+    overflow: hidden;
+    position: absolute;
+}
+.top_video video {
+    width: auto;
+    height: 100%; 
+    min-width: 100%; 
+    min-height: 100%; 
+    object-fit: cover; 
+    mix-blend-mode: screen;
 }
 .block_left {
     flex-direction: row;
