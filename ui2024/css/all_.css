@@ -77,8 +77,6 @@ span a, p a, li a{
     min-width: 100%; 
     overflow: hidden;
     position: absolute;
-    top: -6%;
-    background-image: none;
 }
 .top_video video {
     width: auto;
