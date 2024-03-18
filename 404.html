@@ -1,8 +1,6 @@
 <head>
-   <title>redirecting</title>
-   <meta http-equiv="refresh" content="0.1; url = https://opendrivelab.com/challenge2024/"/>
+    <title>redirecting</title>
 </head>
-
 
 
 <!-- Google tag (gtag.js) -->
@@ -14,9 +12,21 @@
 
   gtag('config', 'G-07T97F5TB5');
 </script>
-
-
-
+ 
+ 
+ 
 <body>
    <p>redirecting...</p>
 </body>
+
+
+
+<script>
+    switch (new URL(document.URL).pathname) {
+        case "/lihongyang": 
+            window.location = "https://lihongyang.info/";
+            break
+        default:
+            window.location = "/";
+    };
+</script>
