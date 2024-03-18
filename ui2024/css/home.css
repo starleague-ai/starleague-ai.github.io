@@ -28,11 +28,8 @@
 
 
 
-.banner_title_en span, .banner_title_en span a {
+.banner_title_en span, .banner_title_en {
     width: 77%;
-    font-size: 33px;
-    font-weight: bold;
-    color: rgb(233, 233, 233);
 }
 @media screen and (max-width: 1024px) {
     .banner_title_en span, .banner_title_en span a {
@@ -42,18 +39,10 @@
 
 
 
-.banner_content span, .banner_content span a {
-    font-size: 23px;
-    color: rgb(233, 233, 233);
-}
-
-
-
 .track_title {
     margin: 0;
 }
 .track_title h1 {
-    font-size: 400%;
     margin: 0;
 }
 
@@ -76,9 +65,5 @@
     justify-content: center;
     align-items: center;
     padding: 7px;
-}
-.block_left div .vision_container a span {
-    font-size: 33px;
-    font-weight: bold;
     text-align: center;
 }
