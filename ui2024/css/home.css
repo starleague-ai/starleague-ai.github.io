@@ -19,23 +19,22 @@
 
 
 
-.banner_title_cn {
+.banner_title {
     flex-direction: row;
 }
-.banner_title_cn img {
+.banner_title img {
     width: 512px;
 }
 
 
 
-.banner_title_en span, .banner_title_en {
+.banner_subtitle {
     width: 77%;
-}
-@media screen and (max-width: 1024px) {
-    .banner_title_en span, .banner_title_en span a {
+    @media screen and (max-width: 1024px) {
         width: 100%;
     }
 }
+
 
 
 
