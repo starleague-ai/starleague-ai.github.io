@@ -146,6 +146,15 @@ a:hover .link_img {
 }
 .block_left div .brand_container div img {
     height: 66px;
+    @media screen and (max-width: 1024px) {
+        height: 55px;
+    }
+}
+.logo_small {
+    height: 55px !important;
+    @media screen and (max-width: 1024px) {
+        height: 44px !important;
+    }
 }
 .block_left div .brand_container div {
     display: flex;
@@ -160,11 +169,7 @@ a:hover .link_img {
     padding: 5px;
     border-radius: 33px;
     user-select: none;
-}
-@media screen and (max-width: 1024px) {
-    .block_left div .brand_container div img {
-        height: 55px;
-    }
+    display: block;;
 }
 
 
