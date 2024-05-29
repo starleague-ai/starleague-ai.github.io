@@ -60,3 +60,19 @@
 .person_container {
     gap: 7% !important;
 }
+
+
+
+.live {
+    width: 100%;
+    & img {
+        width: 160px;
+    }
+    & span {
+        text-align: center;
+        @media screen and (max-width: 1024px) {
+            text-align: left;
+            padding-left: 32px;
+        }
+    }
+}
