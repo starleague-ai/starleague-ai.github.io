@@ -1,0 +1,130 @@
+<link href="/ui2024/css/header.css" rel="stylesheet" type="text/css" media="all" as="style" importance="high"/>
+
+
+
+<div class="header" id="header" style="display: none;">
+    <div class="block_header">
+
+        <div class="header_left">
+            <a href="/">
+                <img id="header_logo" src="/assets/icon/star_league_white.png"/>
+            </a>
+        </div>
+
+        <div class="header_right" id="header_right">
+            <ul>
+
+                <!-- <li><a href="/publications/">Publication</a></li> -->
+
+            </ul>
+        </div>
+
+        <div class="nav_button" onclick="show()">
+            <img id="nav_button" src="/assets/icon/nav_white.png" />
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+    const as_transparent = () => {
+        header.classList.remove("nav_scoll");
+        header_logo.src = "/assets/icon/star_league_white.png";
+        nav_button.src = "/assets/icon/nav_white.png";
+    };
+    const as_white = () => {
+        header.classList.add("nav_scoll");
+        header_logo.src = "/assets/icon/star_league.png";
+        nav_button.src = "/assets/icon/nav.png";
+    };
+</script>
+
+
+
+<script>
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 0) {
+            as_white();
+        } else {
+            if (header_right.style.display != "flex") {
+                as_transparent();
+            }
+        }
+    });
+</script>
+
+
+
+<script>
+    if (window.innerWidth > 1024) {
+        eles = document.getElementsByClassName("header");
+        for (let i = 0; i < eles.length; i++) {
+            eles[i].addEventListener("mouseover", () => {
+                as_white();
+            })
+            eles[i].addEventListener("mouseout", () => {
+                if (!window.scrollY > 0) {
+                    as_transparent();
+                }
+            })
+        }
+    }
+</script>
+
+
+
+<script>
+    const show = () => {
+        if (header_right.style.display === "none" || !header_right.style.display) {
+            header_right.style.display = "flex";
+            as_white();
+        } else {
+            header_right.style.display = "none";
+            if (window.scrollY === 0) {
+                as_transparent();
+            }
+            let elements = document.getElementsByClassName("dropdown");
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "none";
+            }
+        }
+    };
+</script>
+
+
+
+<script>
+    const drop = () => {
+        if (window.innerWidth <= 1024) {
+            eles = document.getElementsByClassName("dropdown");
+            for (let i = 0; i < eles.length; i++) {
+                if (eles[i] != event.currentTarget.children[1]) {
+                    eles[i].style.display = "none";
+                }
+            }
+            if (event.currentTarget.children[1].style.display === "none" || !event.currentTarget.children[1].style.display) {
+                event.currentTarget.children[1].style.display = "flex";
+            } else {
+                event.currentTarget.children[1].style.display = "none";
+            }
+        }
+    };
+    const stop_propagation = () => {
+        if (window.innerWidth <= 1024) {
+            event.stopPropagation();
+        }
+    };
+</script>
+
+
+
+<script>
+    function showheader() {
+        header.style.display = "block";
+        window.removeEventListener("scroll", showheader);
+    }
+    window.addEventListener("load", showheader);
+    window.addEventListener("scroll", showheader);
+</script>

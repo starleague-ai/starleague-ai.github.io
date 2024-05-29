@@ -63,3 +63,15 @@
         padding-inline-start: 20px;
     }
 }
+
+
+
+.live {
+    width: 100%;
+    & img {
+        width: 128px;
+    }
+    & span {
+        text-align: center;
+    }
+}
