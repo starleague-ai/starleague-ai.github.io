@@ -76,3 +76,10 @@
         }
     }
 }
+
+
+.inline_link_img {
+    display: inline;
+    content: url(/assets/icon/link.png);
+    height: 13px;
+}
