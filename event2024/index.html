@@ -7,10 +7,16 @@
 
     <link href="/ui2024/css/format.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/ui2024/css/font.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/ui2024/css/sticky.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="./timetable.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="./index.css" rel="stylesheet" type="text/css" media="all"/>
 
     <script src="/ui2024/js/jquery-3.7.1.min.js"  crossorigin="anonymous"></script>
+    <style>
+        .sticky .sticky_row a {
+            width: 50%;
+        }
+    </style>
 </head>
 
 
@@ -33,6 +39,20 @@
     })
     $.get("/ui2024/components/footer.html",function(result){
         $("body").append(result)
+    })
+</script>
+
+
+
+<script>
+    window.addEventListener("scroll", function () {
+        if (sticky.getBoundingClientRect().top <= 64) {
+            sticky.classList.add("sticky_top");
+            header.style.display = "none";
+        } else {
+            sticky.classList.remove("sticky_top");
+            header.style.display = "block";
+        }
     })
 </script>
 
@@ -85,15 +105,23 @@
         </div>
     </div>
 
+    
 
+    <br><br><br>
 
-    <br id="workshop"><br><br>
+    <div class="block sticky" id="sticky">
+        <div class="sticky_row">
+            <a href="#workshop">研讨会（6月8日）</a>
+            <a href="#tutorial">讲习班（6月9日 - 6月10日）</a>
+            <a href="#" class="image"><img src="/assets/icon/top_white.png"/></a>
+        </div>
+    </div>
 
     <div class="block" style="margin: 0;">
         <div class="navigator"></div>
     </div>
 
-    <br><br><br>
+    <br id="workshop"><br><br>
 
 
 
@@ -155,8 +183,14 @@
                         <tr>
                             <td>10:20 - 10:30</td>
                             <td></td>
-                            <td><a target="_blank" href="https://opendrivelab.com/challenge2024/"><b>Summary of the Autonomous Grand Challenge <img loading="lazy" class="inline_link_img"/><br>国际挑战赛赛事总结</b></a></td>
+                            <td><a target="_blank" href="https://opendrivelab.com/challenge2024/"><b>国际挑战赛颁奖典礼</b><img loading="lazy" class="inline_link_img"/></a></td>
                             <td>
+                                <b>赛事总结：</b>
+                                <br>
+                                <b>李弘扬</b> <i class="gray">上海人工智能实验室青年科学家</i>
+                                <br><br>
+                                <b>颁奖嘉宾：</b>
+                                <br>
                                 <b>仲东亭</b> <i class="gray">上海市科委实验室处处长</i>
                                 <br>
                                 <b>虞晶怡</b> <i class="gray">上海科技大学副教务长、信息学院执行院长、教授</i>
