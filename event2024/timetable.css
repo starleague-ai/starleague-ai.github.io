@@ -58,8 +58,14 @@
 
 
 .timetable_table {
-    ul {
+    & ul {
         margin: 0;
         padding-inline-start: 20px;
+    }
+    & .poll {
+        height: 99px;
+        @media screen and (max-width: 1024px) {
+            height: 200px;
+        }
     }
 }
