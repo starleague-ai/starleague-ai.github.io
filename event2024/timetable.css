@@ -50,8 +50,8 @@
             width: 33px;
         }
     }
-    &:nth-child(5) {
-        display: none;
+    &:nth-child(5) img {
+        height: 22px;
     }
     &:nth-child(6) {
         display: none;
