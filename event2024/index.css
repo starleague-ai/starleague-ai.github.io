@@ -88,7 +88,7 @@
 
 .snapshots_container {
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, 280px);
     justify-content: space-between;
     gap: 30px;
     margin-bottom: max(33px, 3%);
@@ -96,11 +96,13 @@
 .snapshots_container div {
     border: 1px solid lightgray;
 }
+.snapshots_container div a {
+    display: flex;
+}
 .snapshots_container div a img {
     height: 210px;
     width: 280px;
     background-size: cover; 
-    /* background-position: left; */
     margin: 3px;
 }
 @media screen and (max-width: 1024px) {
